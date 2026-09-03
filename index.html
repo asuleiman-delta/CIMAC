@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CIMAC · Centro de Innovación en Tecnología de Materiales</title>
+<meta name="description" content="CIMAC desarrolla materiales y soluciones para el entorno construido: materias primas secundarias, componentes biobasados, logística circular e innovación en construcción.">
+<meta name="theme-color" content="#16111f">
+<link rel="icon" href="assets/cimac-badge-white.png">
+<meta property="og:title" content="CIMAC · Innovación en materiales para el entorno construido">
+<meta property="og:description" content="Centro de Innovación en Tecnología de Materiales · Usach">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/cimac-wordmark-white.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-5e022a0e-b71f-4223-b93c-179ce59a54f1/styles.css">
+<script src="_ds/industry-5e022a0e-b71f-4223-b93c-179ce59a54f1/_ds_bundle.js"></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<style>
+@font-face{font-family:'Euclid Flex';src:url('assets/fonts/EuclidFlexMedium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Euclid Flex';src:url('assets/fonts/EuclidFlexSemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Euclid Flex';src:url('assets/fonts/EuclidFlexBold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Campton';src:url('assets/fonts/CamptonBook.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Campton';src:url('assets/fonts/CamptonMedium.otf') format('opentype');font-weight:500;font-display:swap}
+@font-face{font-family:'Campton';src:url('assets/fonts/CamptonSemiBold.otf') format('opentype');font-weight:600;font-display:swap}
+html{scroll-behavior:smooth}
+body{margin:0;background:#ffffff;color:#1e1728;font-family:'Campton','Helvetica Neue',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*{box-sizing:border-box}
+a{color:#654a9e;text-decoration:none;transition:color .25s ease}
+a:hover{color:#fc4425}
+::selection{background:rgba(252,68,37,.22)}
+:focus-visible{outline:2px solid #fc4425;outline-offset:3px}
+[data-track]::-webkit-scrollbar{height:0}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family:'Campton'}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes riseT{from{transform:translateY(26px)}to{transform:none}}
+@keyframes marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@keyframes linkIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-3%,0) scale(1.05)}}
+</style>
+</helmet>
+
+<div ref="{{ root }}" style="position:relative;width:100%;overflow:clip">
+
+  <header data-header="" style="position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s ease,box-shadow .35s ease,border-color .35s ease;border-bottom:1px solid transparent">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(20px,5vw,80px)">
+      <a href="#top" style="display:block;flex:0 0 auto">
+        <img data-logo="" src="assets/cimac-wordmark-white.png" alt="CIMAC" style="height:clamp(26px,2.4vw,34px);width:auto;display:block">
+      </a>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <nav style="display:flex;align-items:center;gap:clamp(14px,1.9vw,32px)">
+          <a href="#que-hacemos" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">¿Qué hacemos?</a>
+          <a href="#proyectos" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Proyectos</a>
+          <a href="#nosotros" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Nosotros</a>
+          <a href="#actualidad" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Noticias y Eventos</a>
+          <a href="#contacto" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Súmate</a>
+          <a href="#contacto" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Contacto</a>
+        </nav>
+      </sc-if>
+      <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
+        <a href="#contacto" style="display:inline-flex;align-items:center;gap:9px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:14px;padding:13px 22px;border-radius:999px;white-space:nowrap;transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-2px)">Solicita una asesoría</a>
+        <button onClick="{{ toggleMenu }}" aria-label="Menú" style="display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:34px;padding:0 12px;border:1px solid rgba(255,255,255,.28);background:transparent;border-radius:999px;cursor:pointer;transition:border-color .3s ease,background .3s ease" style-hover="border-color:#ffffff;background:rgba(255,255,255,.08)">
+          <span data-burger="" style="display:block;height:1.5px;background:#ffffff;border-radius:2px"></span>
+          <span data-burger="" style="display:block;height:1.5px;background:#ffffff;border-radius:2px"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:70;background:#16111f;display:flex;flex-direction:column;padding:clamp(20px,5vw,80px);animation:linkIn .4s both">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <img src="assets/cimac-wordmark-white.png" alt="CIMAC" style="height:30px;width:auto">
+        <button onClick="{{ toggleMenu }}" aria-label="Cerrar" style="width:46px;height:34px;border:1px solid rgba(255,255,255,.28);background:transparent;border-radius:999px;color:#ffffff;font-size:20px;cursor:pointer;font-family:'Campton'">×</button>
+      </div>
+      <nav style="margin-top:auto;margin-bottom:auto;display:flex;flex-direction:column;gap:clamp(6px,1.4vh,14px)">
+        <a href="#que-hacemos" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.05s" style-hover="color:#fc4425">¿Qué hacemos?</a>
+        <a href="#proyectos" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.11s" style-hover="color:#fc4425">Proyectos</a>
+        <a href="#nosotros" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.17s" style-hover="color:#fc4425">Nosotros</a>
+        <a href="#actualidad" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.23s" style-hover="color:#fc4425">Noticias y Eventos</a>
+        <a href="#contacto" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.29s" style-hover="color:#fc4425">Súmate</a>
+        <a href="#contacto" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.35s" style-hover="color:#fc4425">Contacto</a>
+      </nav>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;font-family:'Campton';font-size:14px;color:rgba(255,255,255,.5);animation:linkIn .6s both;animation-delay:.4s">
+        <span>contacto@cimac.cl</span>
+        <span>+56 2 XXXX XXXX</span>
+      </div>
+    </div>
+  </sc-if>
+
+  <div data-loader="" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#fc4425;display:flex;align-items:center;justify-content:center;transform:translateY(0);transition:transform .95s cubic-bezier(.76,0,.24,1)">
+    <img data-loader-logo="" src="assets/cimac-badge-white.png" alt="" style="width:clamp(96px,11vw,148px);height:auto;display:block;transition:opacity .4s ease,transform .5s cubic-bezier(.16,1,.3,1)">
+  </div>
+  <section id="top" style="position:relative;background:#1e1728;color:#ffffff;overflow:hidden;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:clamp(110px,13vh,150px) clamp(20px,5vw,80px) clamp(70px,9vh,110px)">
+    <video data-hero-video="" src="assets/hero-comp5.mp4" autoplay="" muted="" playsinline="" preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;opacity:0"></video>
+    <canvas data-hero-blur="" aria-hidden="true" style="position:absolute;inset:-7%;width:114%;height:114%;display:block;pointer-events:none;filter:blur(30px) saturate(118%) brightness(96%)"></canvas>
+    <canvas data-hero-lens="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;opacity:0"></canvas>
+    <div style="position:relative;width:100%;max-width:1240px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <p style="margin:0 0 clamp(20px,3vw,34px);font-family:'Campton';font-weight:600;font-size:clamp(10px,.85vw,12px);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);animation:rise .9s cubic-bezier(.16,1,.3,1) both">Centro de Innovación en Tecnología de Materiales · USACH</p>
+      <h1 style="margin:0;max-width:100%;font-family:'Euclid Flex';font-weight:700;font-size:clamp(38px,6.4vw,88px);line-height:.98;letter-spacing:-.03em;text-wrap:pretty;animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.08s">Innovación en materiales<br>para el <span style="color: var(--color-bg);">entorno construido</span></h1>
+      <p style="margin:clamp(22px,3vw,34px) 0 0;max-width:52ch;font-family:'Campton';font-size:clamp(16px,1.25vw,20px);line-height:1.6;color:rgba(255,255,255,.74);animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.16s">Transformamos residuos y compuestos biobasados en soluciones reales para la industria de la construcción.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:clamp(28px,4vw,44px);animation:riseT 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.24s">
+        <a href="#contacto" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-3px)">Solicita una asesoría
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .35s cubic-bezier(.16,1,.3,1)"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+        </a>
+        <a href="#nosotros" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);backdrop-filter:blur(34px);-webkit-backdrop-filter:blur(34px);color:#ffffff;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s ease,background .3s ease" style-hover="transform:translateY(-3px)">Conócenos</a>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showCampaign }}" hint-placeholder-val="{{ true }}">
+  <a href="#actualidad" style="display:flex;align-items:center;gap:clamp(14px,2vw,28px);background:#fc4425;padding:12px clamp(16px,2.4vw,32px) 12px 0;color:#ffffff;transition:background .3s ease" style-hover="background:#e6351a">
+    <span style="flex:1 1 auto;min-width:0;overflow:hidden;display:block">
+    <div style="display:flex;width:max-content;animation:marquee 34s linear infinite">
+      <div style="display:flex;align-items:center;gap:clamp(28px,4vw,56px);padding-right:clamp(28px,4vw,56px)">
+        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.14em;text-transform:uppercase;color:#ffffff;white-space:nowrap">Convocatoria abierta</span>
+        <span style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7);flex:0 0 auto"></span>
+        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.14em;text-transform:uppercase;color:#ffffff;white-space:nowrap;font-weight:500;letter-spacing:.06em;text-transform:none">Fondo de Innovación Industrial 2026 — postulaciones hasta el 30 de octubre</span>
+        <span style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7);flex:0 0 auto"></span>
+      </div>
+      <div aria-hidden="true" style="display:flex;align-items:center;gap:clamp(28px,4vw,56px);padding-right:clamp(28px,4vw,56px)">
+        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.14em;text-transform:uppercase;color:#ffffff;white-space:nowrap">Convocatoria abierta</span>
+        <span style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7);flex:0 0 auto"></span>
+        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.14em;text-transform:uppercase;color:#ffffff;white-space:nowrap;font-weight:500;letter-spacing:.06em;text-transform:none">Fondo de Innovación Industrial 2026 — postulaciones hasta el 30 de octubre</span>
+        <span style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7);flex:0 0 auto"></span>
+      </div>
+    </div>
+    </span>
+    <span style="flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:9px 18px;font-family:'Campton';font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#ffffff;white-space:nowrap">Ver más
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+    </span>
+  </a>
+  </sc-if>
+
+
+  <section id="que-hacemos" data-pin="" style="background:#16111f;color:#ffffff;position:relative">
+    <div data-pin-wrap="" style="position:relative">
+      <div data-pin-stick="" style="padding:clamp(64px,8vw,120px) 0">
+        <div data-track="" style="display:flex;align-items:stretch;gap:clamp(18px,2vw,32px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:clamp(34px,5vw,80px);padding:0 clamp(34px,5vw,80px);will-change:transform">
+          <div style="flex:0 0 auto;width:clamp(268px,32vw,460px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center">
+            <p style="margin:0 0 18px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#a08fc4">Qué hacemos</p>
+            <h2 style="margin:0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(42px,5.6vw,82px);line-height:1;letter-spacing:-.025em">Líneas de I+D+i+tt</h2>
+            <p style="margin:22px 0 0;font-family:'Campton';font-size:clamp(15px,1.15vw,18px);line-height:1.6;color:rgba(255,255,255,.66);max-width:38ch">Cuatro líneas de trabajo que conectan la investigación en materiales con la industria de la construcción.</p>
+          </div>
+          <article data-stat="" data-linecard="" data-accent="#654a9e" style="position:relative;flex:0 0 auto;width:clamp(268px,25vw,400px);height:clamp(500px,72vh,800px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(24px,2.4vw,38px);display:flex;flex-direction:column;overflow:hidden">
+            <span data-linebar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-lineglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span data-linenum="" style="position:relative;font-family:'Euclid Flex';font-weight:700;font-size:clamp(64px,7vw,108px);line-height:.85;letter-spacing:-.04em;color:rgba(255,255,255,.07);transition:color .45s ease">01</span>
+            <span data-linetag="" style="position:absolute;top:clamp(24px,2.4vw,38px);right:clamp(24px,2.4vw,38px);font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 12px;transition:color .4s ease,border-color .4s ease">MPS</span>
+            <span style="margin-top:auto;position:relative">
+              <span data-linerule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden"><span data-linerule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+              <h3 style="margin:clamp(20px,2vw,28px) 0 0;font-family:'Euclid Flex';font-weight:600;font-size:clamp(23px,2.1vw,32px);line-height:1.08;letter-spacing:-.02em;text-wrap:pretty">Materias Primas Secundarias (MPS)</h3>
+              <p style="margin:14px 0 0;font-family:'Campton';font-size:15px;line-height:1.55;color:rgba(255,255,255,.58)">a partir de la Ley REP</p>
+              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Hugo Pérez – Líder L1</p>
+              <span data-lineexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+              </span>
+            </span>
+          </article>
+          <article data-stat="" data-linecard="" data-accent="#9a9a5e" style="position:relative;flex:0 0 auto;width:clamp(268px,25vw,400px);height:clamp(500px,72vh,800px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(24px,2.4vw,38px);display:flex;flex-direction:column;overflow:hidden">
+            <span data-linebar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-lineglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(154,154,94,0) 30%,rgba(154,154,94,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span data-linenum="" style="position:relative;font-family:'Euclid Flex';font-weight:700;font-size:clamp(64px,7vw,108px);line-height:.85;letter-spacing:-.04em;color:rgba(255,255,255,.07);transition:color .45s ease">02</span>
+            <span data-linetag="" style="position:absolute;top:clamp(24px,2.4vw,38px);right:clamp(24px,2.4vw,38px);font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 12px;transition:color .4s ease,border-color .4s ease">CBB</span>
+            <span style="margin-top:auto;position:relative">
+              <span data-linerule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden"><span data-linerule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+              <h3 style="margin:clamp(20px,2vw,28px) 0 0;font-family:'Euclid Flex';font-weight:600;font-size:clamp(23px,2.1vw,32px);line-height:1.08;letter-spacing:-.02em;text-wrap:pretty">Componentes Biobasados (CBB)</h3>
+              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Macarena Valenzuela – Líder L2</p>
+              <span data-lineexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+              </span>
+            </span>
+          </article>
+          <article data-stat="" data-linecard="" data-accent="#a58a80" style="position:relative;flex:0 0 auto;width:clamp(268px,25vw,400px);height:clamp(500px,72vh,800px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(24px,2.4vw,38px);display:flex;flex-direction:column;overflow:hidden">
+            <span data-linebar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-lineglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(165,138,128,0) 30%,rgba(165,138,128,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span data-linenum="" style="position:relative;font-family:'Euclid Flex';font-weight:700;font-size:clamp(64px,7vw,108px);line-height:.85;letter-spacing:-.04em;color:rgba(255,255,255,.07);transition:color .45s ease">03</span>
+            <span data-linetag="" style="position:absolute;top:clamp(24px,2.4vw,38px);right:clamp(24px,2.4vw,38px);font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 12px;transition:color .4s ease,border-color .4s ease">LCPR</span>
+            <span style="margin-top:auto;position:relative">
+              <span data-linerule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden"><span data-linerule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+              <h3 style="margin:clamp(20px,2vw,28px) 0 0;font-family:'Euclid Flex';font-weight:600;font-size:clamp(21px,1.9vw,28px);line-height:1.12;letter-spacing:-.02em;text-wrap:pretty">Logística circular y optimización de procesos industriales de reciclaje (LCPR)</h3>
+              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Iván Derpich – Líder L3</p>
+              <span data-lineexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+              </span>
+            </span>
+          </article>
+          <article data-stat="" data-linecard="" data-accent="#fc4425" style="position:relative;flex:0 0 auto;width:clamp(268px,25vw,400px);height:clamp(500px,72vh,800px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);border-right:1px solid rgba(255,255,255,.13);padding:clamp(24px,2.4vw,38px);display:flex;flex-direction:column;overflow:hidden">
+            <span data-linebar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-lineglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(252,68,37,0) 30%,rgba(252,68,37,.28) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span data-linenum="" style="position:relative;font-family:'Euclid Flex';font-weight:700;font-size:clamp(64px,7vw,108px);line-height:.85;letter-spacing:-.04em;color:rgba(255,255,255,.07);transition:color .45s ease">04</span>
+            <span data-linetag="" style="position:absolute;top:clamp(24px,2.4vw,38px);right:clamp(24px,2.4vw,38px);font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 12px;transition:color .4s ease,border-color .4s ease">IDSS</span>
+            <span style="margin-top:auto;position:relative">
+              <span data-linerule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden"><span data-linerule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+              <h3 style="margin:clamp(20px,2vw,28px) 0 0;font-family:'Euclid Flex';font-weight:600;font-size:clamp(21px,1.9vw,28px);line-height:1.12;letter-spacing:-.02em;text-wrap:pretty">Innovación tecnológica para el desarrollo de sistemas constructivos sostenibles (IDSS)</h3>
+              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Pavlo Santander – Líder L4</p>
+              <span data-lineexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+              </span>
+            </span>
+          </article>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;padding:clamp(28px,3vw,44px) clamp(20px,5vw,80px) 0">
+          <span style="display:flex;gap:7px">
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:#fc4425;transition:background .3s ease,transform .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease,transform .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease,transform .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease,transform .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease,transform .3s ease"></span>
+          </span>
+          <span style="font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45)">Desplázate para explorar</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#1e1728;color:#ffffff;padding:clamp(56px,7vw,96px) clamp(20px,5vw,80px);border-top:1px solid rgba(255,255,255,.09)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(28px,4vw,56px);align-items:start">
+      <div data-stat="">
+        <p data-count="28" style="margin:0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(48px,6vw,84px);line-height:1;letter-spacing:-.03em">28</p>
+        <p style="margin:12px 0 0;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.62)">Investigadores/as</p>
+      </div>
+      <div data-stat="">
+        <p data-count="6" style="margin:0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(48px,6vw,84px);line-height:1;letter-spacing:-.03em">6</p>
+        <p style="margin:12px 0 0;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.62)">Instituciones asociadas</p>
+      </div>
+      <div data-stat="">
+        <p data-count="4" style="margin:0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(48px,6vw,84px);line-height:1;letter-spacing:-.03em">4</p>
+        <p style="margin:12px 0 0;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.62)">Líneas de I+D+i+tt</p>
+      </div>
+      <div data-stat="" style="border-left:2px solid #fc4425;padding-left:clamp(18px,2vw,28px)">
+        <p style="margin:0;font-family:'Campton';font-size:clamp(15px,1.15vw,18px);line-height:1.6;color:rgba(255,255,255,.82)">Financiamiento adjudicado a través de <strong style="font-weight:600;color:#ffffff">ANID</strong> como Centros Tecnológicos para la Innovación 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" style="background:#ffffff;padding:clamp(72px,9vw,140px) clamp(20px,5vw,80px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 5% entry 70%">
+      <div>
+        <p style="margin:0 0 16px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#a58a80">Portafolio</p>
+        <h2 style="margin:0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(42px,5.8vw,86px);line-height:1;letter-spacing:-.025em;color:#1e1728">Proyectos</h2>
+      </div>
+      <a href="#proyectos" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(30,23,40,.22);color:#1e1728;font-family:'Campton';font-weight:600;font-size:14px;padding:14px 24px;border-radius:999px;transition:border-color .3s ease,background .3s ease,transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">Ver todos los proyectos</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#e6e2ee;border:1px solid #e6e2ee;margin-top:clamp(40px,5vw,72px)" data-stat="" data-cols="2">
+      <a data-projcard="" href="#proyectos" style="position:relative;background:#ffffff;display:flex;flex-direction:column;padding:clamp(22px,2.4vw,38px);color:#1e1728;cursor:pointer;overflow:hidden">
+        <span data-projbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none"></span>
+        <span style="display:block;position:relative;overflow:hidden;aspect-ratio:5/3;border:1px solid #e6e2ee">
+          <span data-projzoom="" style="position:absolute;inset:0;background-image:url('assets/photos/milad-fakurian-9xCvw544PWQ-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+        </span>
+        <span style="display:block;margin-top:clamp(22px,2.4vw,34px);position:relative">
+          <span data-projrule="" style="position:relative;display:block;height:1px;background:#e6e2ee;overflow:hidden"><span data-projrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+          <span data-projtitle="" style="display:block;margin-top:clamp(18px,1.8vw,26px);font-family:'Euclid Flex';font-weight:600;font-size:clamp(22px,2.1vw,32px);line-height:1.08;letter-spacing:-.02em;color:#1e1728;transition:color .35s ease;text-wrap:pretty">[Nombre del proyecto 01]</span>
+          <span style="display:block;margin-top:14px;font-family:'Campton';font-weight:500;font-size:14px;letter-spacing:.02em;color:#8a8299">Materias primas secundarias · Ensayos · Transferencia</span>
+          <span data-projexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+          </span>
+        </span>
+      </a>
+      <a data-projcard="" href="#proyectos" style="position:relative;background:#ffffff;display:flex;flex-direction:column;padding:clamp(22px,2.4vw,38px);color:#1e1728;cursor:pointer;overflow:hidden">
+        <span data-projbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none"></span>
+        <span style="display:block;position:relative;overflow:hidden;aspect-ratio:5/3;border:1px solid #e6e2ee">
+          <span data-projzoom="" style="position:absolute;inset:0;background-image:url('assets/photos/ken-cheung-KonWFWUaAuk-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+        </span>
+        <span style="display:block;margin-top:clamp(22px,2.4vw,34px);position:relative">
+          <span data-projrule="" style="position:relative;display:block;height:1px;background:#e6e2ee;overflow:hidden"><span data-projrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+          <span data-projtitle="" style="display:block;margin-top:clamp(18px,1.8vw,26px);font-family:'Euclid Flex';font-weight:600;font-size:clamp(22px,2.1vw,32px);line-height:1.08;letter-spacing:-.02em;color:#1e1728;transition:color .35s ease;text-wrap:pretty">[Nombre del proyecto 02]</span>
+          <span style="display:block;margin-top:14px;font-family:'Campton';font-weight:500;font-size:14px;letter-spacing:.02em;color:#8a8299">Componentes biobasados · Prototipado · Escalamiento</span>
+          <span data-projexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+          </span>
+        </span>
+      </a>
+      <a data-projcard="" href="#proyectos" style="position:relative;background:#ffffff;display:flex;flex-direction:column;padding:clamp(22px,2.4vw,38px);color:#1e1728;cursor:pointer;overflow:hidden">
+        <span data-projbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none"></span>
+        <span style="display:block;position:relative;overflow:hidden;aspect-ratio:5/3;border:1px solid #e6e2ee">
+          <span data-projzoom="" style="position:absolute;inset:0;background-image:url('assets/photos/abel-y-costa-BhgeP48pDOE-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+        </span>
+        <span style="display:block;margin-top:clamp(22px,2.4vw,34px);position:relative">
+          <span data-projrule="" style="position:relative;display:block;height:1px;background:#e6e2ee;overflow:hidden"><span data-projrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+          <span data-projtitle="" style="display:block;margin-top:clamp(18px,1.8vw,26px);font-family:'Euclid Flex';font-weight:600;font-size:clamp(22px,2.1vw,32px);line-height:1.08;letter-spacing:-.02em;color:#1e1728;transition:color .35s ease;text-wrap:pretty">[Nombre del proyecto 03]</span>
+          <span style="display:block;margin-top:14px;font-family:'Campton';font-weight:500;font-size:14px;letter-spacing:.02em;color:#8a8299">Logística circular · Modelamiento · Piloto industrial</span>
+          <span data-projexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+          </span>
+        </span>
+      </a>
+      <a data-projcard="" href="#proyectos" style="position:relative;background:#ffffff;display:flex;flex-direction:column;padding:clamp(22px,2.4vw,38px);color:#1e1728;cursor:pointer;overflow:hidden">
+        <span data-projbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none"></span>
+        <span style="display:block;position:relative;overflow:hidden;aspect-ratio:5/3;border:1px solid #e6e2ee">
+          <span data-projzoom="" style="position:absolute;inset:0;background-image:url('assets/photos/nabajyoti-ray-0gZy38p9XJE-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+        </span>
+        <span style="display:block;margin-top:clamp(22px,2.4vw,34px);position:relative">
+          <span data-projrule="" style="position:relative;display:block;height:1px;background:#e6e2ee;overflow:hidden"><span data-projrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+          <span data-projtitle="" style="display:block;margin-top:clamp(18px,1.8vw,26px);font-family:'Euclid Flex';font-weight:600;font-size:clamp(22px,2.1vw,32px);line-height:1.08;letter-spacing:-.02em;color:#1e1728;transition:color .35s ease;text-wrap:pretty">[Nombre del proyecto 04]</span>
+          <span style="display:block;margin-top:14px;font-family:'Campton';font-weight:500;font-size:14px;letter-spacing:.02em;color:#8a8299">Sistemas constructivos · Ensayos · ACV</span>
+          <span data-projexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+          </span>
+        </span>
+      </a>
+    </div>
+    <a data-projcard="" data-casecard="" data-stat="" href="#proyectos" style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:0;margin-top:-1px;background:#16111f;border:1px solid #16111f;color:#ffffff;cursor:pointer;overflow:hidden">
+      <span data-projbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+      <span data-casephoto="" style="position:relative;display:block;overflow:hidden;margin:clamp(22px,2.4vw,38px);border:1px solid rgba(255,255,255,.13)">
+        <span data-projzoom="" style="position:absolute;inset:0;background-image:url('assets/photos/ben-maguire-FTYgqLeseI4-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+      </span>
+      <span style="padding:clamp(28px,3.4vw,56px) clamp(28px,3.4vw,56px) clamp(28px,3.4vw,56px) clamp(10px,1.2vw,20px);display:flex;flex-direction:column;justify-content:center">
+        <span style="align-self:flex-start;font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 12px">Caso de éxito</span>
+        <span data-projrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(24px,2.6vw,36px)"><span data-projrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+        <span data-projtitle="" style="display:block;margin-top:clamp(18px,1.8vw,26px);font-family:'Euclid Flex';font-weight:600;font-size:clamp(24px,2.6vw,38px);line-height:1.08;letter-spacing:-.02em;color:#ffffff;transition:color .35s ease;text-wrap:pretty">[Caso de éxito — empresa vinculada — resultado]</span>
+        <span style="display:block;margin-top:16px;max-width:52ch;font-family:'Campton';font-size:clamp(15px,1.15vw,17px);line-height:1.6;color:rgba(255,255,255,.66)">Resumen de una línea sobre el problema industrial abordado y el resultado transferido.</span>
+        <span data-projexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Leer el caso
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+        </span>
+      </span>
+    </a>
+  </section>
+
+  <section id="nosotros" data-pin="" style="background:#16111f;color:#ffffff;position:relative">
+    <div data-pin-wrap="" style="position:relative">
+      <div data-pin-stick="" style="padding:clamp(64px,8vw,120px) 0">
+        <div data-track="" style="display:flex;align-items:stretch;gap:clamp(18px,2vw,32px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:clamp(34px,5vw,80px);padding:0 clamp(34px,5vw,80px);will-change:transform">
+          <div style="flex:0 0 auto;width:clamp(268px,30vw,440px);scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center">
+            <p style="margin:0 0 18px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#a08fc4">Nosotros</p>
+            <h2 style="margin:0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(42px,5.6vw,82px);line-height:1;letter-spacing:-.025em">Equipo</h2>
+            <a href="#nosotros" style="align-self:flex-start;margin-top:28px;display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.28);color:#ffffff;font-family:'Campton';font-weight:600;font-size:14px;padding:14px 24px;border-radius:999px;transition:border-color .3s ease,background .3s ease,transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">Conoce al equipo completo</a>
+          </div>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/jose-antonio-carrasco.jpeg" alt="José Antonio Carrasco Villa" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">José Antonio Carrasco Villa</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Director Ejecutivo</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/alexandre-carbonnel.jpeg" alt="Alexandre Carbonnel Torralbo" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Alexandre Carbonnel Torralbo</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Director Científico</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/placeholder-1.jpeg" alt="Francisca Troncoso" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Francisca Troncoso</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargada de Transferencia Tecnológica</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/leslie-diaz.jpeg" alt="Leslie Díaz" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Leslie Díaz</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargada Técnica de Transferencia Tecnológica</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/placeholder-2.jpeg" alt="Ashley Gómez Ceballos" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Ashley Gómez Ceballos</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargada de Comunicaciones</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/placeholder-3.jpeg" alt="Iván Toro" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Iván Toro</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargado de Finanzas</p>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;padding:clamp(28px,3vw,44px) clamp(20px,5vw,80px) 0">
+          <span style="display:flex;gap:7px">
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:#fc4425;transition:background .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease"></span>
+            <span data-dot="" style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s ease"></span>
+          </span>
+          <span style="font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45)">Desplázate para explorar</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f6f5f9;padding:clamp(56px,7vw,104px) clamp(20px,5vw,80px)">
+    <p style="margin:0 0 clamp(26px,3vw,40px);font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8a8299">Consorcio · Instituciones colaboradoras</p>
+    <div data-stat="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:#e2ddec;border:1px solid #e2ddec">
+      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-usach.png" alt="USACH" loading="lazy" style="max-width:100%;height:76px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-utem.png" alt="UTEM" loading="lazy" style="max-width:100%;height:58px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-uai.png" alt="Universidad Adolfo Ibáñez" loading="lazy" style="max-width:100%;height:50px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-udec.png" alt="Universidad de Concepción" loading="lazy" style="max-width:100%;height:56px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-ctec.png" alt="CTEC" loading="lazy" style="max-width:100%;height:46px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-labva.png" alt="LABVA" loading="lazy" style="max-width:100%;height:76px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+    </div>
+  </section>
+
+  <section id="actualidad" style="background:#ffffff;padding:clamp(72px,9vw,140px) clamp(20px,5vw,80px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
+      <div>
+        <p style="margin:0 0 16px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#a58a80">Actualidad</p>
+        <h2 style="margin:0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(42px,5.8vw,86px);line-height:1;letter-spacing:-.025em;color:#1e1728">Noticias y Eventos</h2>
+      </div>
+      <a href="#actualidad" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(30,23,40,.22);color:#1e1728;font-family:'Campton';font-weight:600;font-size:14px;padding:14px 24px;border-radius:999px;transition:border-color .3s ease,background .3s ease,transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">Ver todo</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#e6e2ee;border:1px solid #e6e2ee;margin-top:clamp(36px,4.5vw,64px)" data-stat="" data-cols="3">
+      <a data-newscard="" href="#actualidad" style="position:relative;overflow:hidden;display:flex;flex-direction:column;background:#ffffff;padding:clamp(18px,2vw,28px);color:#1e1728;cursor:pointer">
+        <span data-nbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+        <span style="display:block;position:relative;overflow:hidden;aspect-ratio:4/3;border:1px solid #e6e2ee">
+          <span data-nzoom="" style="position:absolute;inset:0;background-image:url('assets/photos/ken-cheung-KonWFWUaAuk-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+          <span data-narrow="" style="position:absolute;right:14px;bottom:14px;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#fc4425;color:#ffffff;opacity:0;transform:translateY(10px);transition:opacity .4s ease,transform .5s cubic-bezier(.16,1,.3,1)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+          </span>
+        </span>
+        <span data-nrule="" style="position:relative;display:block;height:1px;background:#e6e2ee;overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-nrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+        <span style="display:block;padding:18px 0 0">
+          <span style="display:block;font-family:'Campton';font-weight:600;font-size:12px;letter-spacing:.1em;color:#a58a80">02/06/26 · NOTICIA</span>
+          <span data-ntitle="" style="display:block;margin-top:12px;font-family:'Euclid Flex';font-weight:600;font-size:clamp(18px,1.5vw,23px);line-height:1.22;letter-spacing:-.015em;text-wrap:pretty;transition:color .35s ease">CIMAC constituye su Consejo Directivo y proyecta su estrategia de vinculación con la industria</span>
+        </span>
+      </a>
+      <a data-newscard="" href="#actualidad" style="position:relative;overflow:hidden;display:flex;flex-direction:column;background:#ffffff;padding:clamp(18px,2vw,28px);color:#1e1728;cursor:pointer">
+        <span data-nbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+        <span style="display:block;position:relative;overflow:hidden;aspect-ratio:4/3;border:1px solid #e6e2ee">
+          <span data-nzoom="" style="position:absolute;inset:0;background-image:url('assets/photos/nabajyoti-ray-0gZy38p9XJE-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+          <span data-narrow="" style="position:absolute;right:14px;bottom:14px;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#fc4425;color:#ffffff;opacity:0;transform:translateY(10px);transition:opacity .4s ease,transform .5s cubic-bezier(.16,1,.3,1)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+          </span>
+        </span>
+        <span data-nrule="" style="position:relative;display:block;height:1px;background:#e6e2ee;overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-nrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+        <span style="display:block;padding:18px 0 0">
+          <span style="display:block;font-family:'Campton';font-weight:600;font-size:12px;letter-spacing:.1em;color:#a58a80">24/03/26 · NOTICIA</span>
+          <span data-ntitle="" style="display:block;margin-top:12px;font-family:'Euclid Flex';font-weight:600;font-size:clamp(18px,1.5vw,23px);line-height:1.22;letter-spacing:-.015em;text-wrap:pretty;transition:color .35s ease">Académicos del CIMAC se adjudican proyectos Fondecyt 2026 para fortalecer la investigación en salud, sostenibilidad y entorno construido</span>
+        </span>
+      </a>
+      <a data-newscard="" href="#actualidad" style="position:relative;overflow:hidden;display:flex;flex-direction:column;background:#ffffff;padding:clamp(18px,2vw,28px);color:#1e1728;cursor:pointer">
+        <span data-nbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+        <span style="display:block;position:relative;overflow:hidden;aspect-ratio:4/3;border:1px solid #e6e2ee">
+          <span data-nzoom="" style="position:absolute;inset:0;background-image:url('assets/photos/abel-y-costa-BhgeP48pDOE-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+          <span data-narrow="" style="position:absolute;right:14px;bottom:14px;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#fc4425;color:#ffffff;opacity:0;transform:translateY(10px);transition:opacity .4s ease,transform .5s cubic-bezier(.16,1,.3,1)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+          </span>
+        </span>
+        <span data-nrule="" style="position:relative;display:block;height:1px;background:#e6e2ee;overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-nrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+        <span style="display:block;padding:18px 0 0">
+          <span style="display:block;font-family:'Campton';font-weight:600;font-size:12px;letter-spacing:.1em;color:#a58a80">02/06/26 · NOTICIA</span>
+          <span data-ntitle="" style="display:block;margin-top:12px;font-family:'Euclid Flex';font-weight:600;font-size:clamp(18px,1.5vw,23px);line-height:1.22;letter-spacing:-.015em;text-wrap:pretty;transition:color .35s ease">Investigadores del CIMAC Usach participan en conferencia internacional IAMOT 2026</span>
+        </span>
+      </a>
+    </div>
+    <div style="margin-top:clamp(44px,5vw,80px)">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;margin:0 0 clamp(14px,1.6vw,20px)">
+        <p style="margin:0;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fc4425">Agenda · Próximos eventos</p>
+        <a href="#actualidad" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(30,23,40,.22);color:#1e1728;font-family:'Campton';font-weight:600;font-size:14px;padding:14px 24px;border-radius:999px;transition:border-color .3s ease,background .3s ease,transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">Ver toda la agenda</a>
+      </div>
+      <div data-stat="" data-cols="2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#e6e2ee;border:1px solid #e6e2ee">
+        <a data-eventcard="" href="#actualidad" style="position:relative;display:flex;gap:20px;align-items:flex-start;min-height:clamp(112px,10vw,140px);padding:clamp(18px,2vw,26px);background:#ffffff;color:#1e1728;overflow:hidden">
+          <span data-evbar="" style="position:absolute;left:0;top:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out"></span>
+          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;width:52px">
+            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425">12</span>
+            <span style="font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.18em;margin-top:6px;color:#8a8299">SEP</span>
+          </span>
+          <span style="display:block;flex:1 1 auto;min-width:0">
+            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Seminario: áridos reciclados en hormigón estructural</span>
+            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">09:00 h · Usach, Santiago · Presencial</span>
+          </span>
+        </a>
+        <a data-eventcard="" href="#actualidad" style="position:relative;display:flex;gap:20px;align-items:flex-start;min-height:clamp(112px,10vw,140px);padding:clamp(18px,2vw,26px);background:#ffffff;color:#1e1728;overflow:hidden">
+          <span data-evbar="" style="position:absolute;left:0;top:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out"></span>
+          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;width:52px">
+            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425">01</span>
+            <span style="font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.18em;margin-top:6px;color:#8a8299">OCT</span>
+          </span>
+          <span style="display:block;flex:1 1 auto;min-width:0">
+            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Taller de vinculación con proveedores de la Ley REP</span>
+            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">15:00 h · Online · Cupos limitados</span>
+          </span>
+        </a>
+        <a data-eventcard="" href="#actualidad" style="position:relative;display:flex;gap:20px;align-items:flex-start;min-height:clamp(112px,10vw,140px);padding:clamp(18px,2vw,26px);background:#ffffff;color:#1e1728;overflow:hidden">
+          <span data-evbar="" style="position:absolute;left:0;top:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out"></span>
+          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;width:52px">
+            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425">23</span>
+            <span style="font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.18em;margin-top:6px;color:#8a8299">OCT</span>
+          </span>
+          <span style="display:block;flex:1 1 auto;min-width:0">
+            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Jornada de resultados: componentes biobasados</span>
+            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">10:30 h · Centro CIMAC · Híbrido</span>
+          </span>
+        </a>
+        <a data-eventcard="" href="#actualidad" style="position:relative;display:flex;gap:20px;align-items:flex-start;min-height:clamp(112px,10vw,140px);padding:clamp(18px,2vw,26px);background:#ffffff;color:#1e1728;overflow:hidden">
+          <span data-evbar="" style="position:absolute;left:0;top:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out"></span>
+          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;width:52px">
+            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425">14</span>
+            <span style="font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.18em;margin-top:6px;color:#8a8299">NOV</span>
+          </span>
+          <span style="display:block;flex:1 1 auto;min-width:0">
+            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Encuentro industria–academia: construcción circular</span>
+            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">08:30 h · Estación Central · Presencial</span>
+          </span>
+        </a>
+      </div>
+      </div>
+    </section></div>
+  
+
+  <section id="contacto" style="position:relative;background:#16111f;color:#ffffff;padding:clamp(72px,9vw,140px) clamp(20px,5vw,80px);overflow:hidden">
+    <div style="position:absolute;top:clamp(-600px,-34vw,-320px);right:clamp(-480px,-26vw,-240px);width:clamp(620px,68vw,1200px);aspect-ratio:1;background-image:url('assets/fondo-blob.png');background-size:contain;background-position:center;background-repeat:no-repeat;opacity:.5;mix-blend-mode:screen;animation:float 24s ease-in-out infinite;pointer-events:none"></div>
+    <div data-stat="" style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(32px,5vw,80px);align-items:start">
+      <div>
+        <p style="margin:0 0 20px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#c9b0a6">Contacto</p>
+        <h2 style="margin:0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,3.6vw,52px);line-height:1.06;letter-spacing:-.025em;text-wrap:pretty">¿Tienes una pregunta, una propuesta o quieres explorar cómo colaborar con CIMAC? Escríbenos.</h2>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:clamp(28px,3.4vw,44px);padding-top:clamp(24px,2.8vw,36px);border-top:1px solid rgba(255,255,255,.14)">
+          <p style="margin:0;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45)">Qué pasa después</p>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <span style="font-family:'Campton';font-weight:600;font-size:13px;color:#fc4425;padding-top:2px">01</span>
+            <p style="margin:0;font-family:'Campton';font-size:15px;line-height:1.55;color:rgba(255,255,255,.72)">Tu mensaje llega al equipo de Transferencia Tecnológica.</p>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <span style="font-family:'Campton';font-weight:600;font-size:13px;color:#fc4425;padding-top:2px">02</span>
+            <p style="margin:0;font-family:'Campton';font-size:15px;line-height:1.55;color:rgba(255,255,255,.72)">Respondemos en un plazo de 5 días hábiles.</p>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start">
+            <span style="font-family:'Campton';font-weight:600;font-size:13px;color:#fc4425;padding-top:2px">03</span>
+            <p style="margin:0;font-family:'Campton';font-size:15px;line-height:1.55;color:rgba(255,255,255,.72)">Si corresponde, coordinamos una reunión con la línea de investigación pertinente.</p>
+          </div>
+        </div>
+      </div>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="border:1px solid rgba(255,255,255,.14);border-radius:20px;background:rgba(255,255,255,.04);padding:clamp(30px,3.6vw,52px);animation:rise .6s cubic-bezier(.16,1,.3,1) both">
+          <span style="display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#fc4425">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>
+          </span>
+          <h3 style="margin:26px 0 0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(24px,2.4vw,34px);line-height:1.1;letter-spacing:-.02em">Mensaje enviado</h3>
+          <p style="margin:14px 0 0;font-family:'Campton';font-size:16px;line-height:1.6;color:rgba(255,255,255,.72);max-width:44ch">Gracias por escribirnos. Recibirás una respuesta del equipo de Transferencia Tecnológica en un plazo de 5 días hábiles.</p>
+          <button onClick="{{ resetForm }}" style="margin-top:28px;display:inline-flex;align-items:center;gap:10px;background:transparent;color:#ffffff;border:1px solid rgba(255,255,255,.28);border-radius:999px;font-family:'Campton';font-weight:600;font-size:15px;padding:15px 26px;cursor:pointer;transition:border-color .3s ease,background .3s ease" style-hover="border-color:#ffffff;background:rgba(255,255,255,.08)">Enviar otro mensaje</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submitForm }}" novalidate="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(12px,1.4vw,18px)">
+        <div style="grid-column:1/-1">
+          <input ref="{{ refNombre }}" type="text" placeholder="Nombre completo *" style="width:100%;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:#ffffff;font-family:'Campton';font-size:16px;padding:24px 26px;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)">
+          <sc-if value="{{ errNombre }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:10px 0 0 4px;font-family:'Campton';font-size:13px;color:#ff8f77">Indícanos tu nombre.</p>
+          </sc-if>
+        </div>
+        <div>
+          <input ref="{{ refCorreo }}" type="email" placeholder="Correo *" style="width:100%;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:#ffffff;font-family:'Campton';font-size:16px;padding:24px 26px;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)">
+          <sc-if value="{{ errCorreo }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:10px 0 0 4px;font-family:'Campton';font-size:13px;color:#ff8f77">Revisa el formato del correo.</p>
+          </sc-if>
+        </div>
+        <input type="text" placeholder="Organización (opcional)" style="width:100%;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:#ffffff;font-family:'Campton';font-size:16px;padding:24px 26px;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)">
+        <div style="grid-column:1/-1">
+          <div data-motivo="" style="position:relative">
+            <button type="button" aria-label="Motivo de contacto" data-motivo-trigger="" onClick="{{ toggleMotivo }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:#ffffff;font-family:'Campton';font-size:16px;padding:24px 26px;cursor:pointer;transition:border-color .3s ease,background .3s ease">
+              <span data-motivo-label="" style="font-family:'Campton';font-size:16px;color:rgba(255,255,255,.5)">{{ motivoLabel }}</span>
+              <svg data-motivo-chev="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;transition:transform .35s cubic-bezier(.16,1,.3,1)"><path d="m6 9.5 6 6 6-6"></path></svg>
+            </button>
+            <sc-if value="{{ motivoOpen }}" hint-placeholder-val="{{ false }}">
+              <div role="listbox" style="position:absolute;left:0;right:0;top:calc(100% + 10px);z-index:30;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:#241c31;box-shadow:0 26px 60px rgba(0,0,0,.5);overflow:hidden;animation:rise .35s cubic-bezier(.16,1,.3,1) both">
+                <p style="margin:0;padding:16px 24px 12px;font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.32)">Elige una opción</p>
+                <button type="button" data-chip="Investigación" onClick="{{ pickMotivo }}" style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;width:100%;text-align:left;background:transparent;border:none;border-top:1px solid rgba(255,255,255,.07);padding:18px 24px;cursor:pointer;transition:background .25s ease">
+                  <span data-num="" style="font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.35);padding-top:5px">01</span>
+                  <span style="display:block">
+                    <span data-opt-title="" style="display:block;font-family:'Campton';font-weight:600;font-size:16px;color:#ffffff">Investigación</span>
+                    <span style="display:block;margin-top:4px;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.5)">Proyectos, publicaciones y líneas L01–L04</span>
+                  </span>
+                  <span data-tick="" style="opacity:0;padding-top:4px;transition:opacity .25s ease">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc4425" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>
+                  </span>
+                </button>
+                <button type="button" data-chip="Servicios" onClick="{{ pickMotivo }}" style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;width:100%;text-align:left;background:transparent;border:none;border-top:1px solid rgba(255,255,255,.07);padding:18px 24px;cursor:pointer;transition:background .25s ease">
+                  <span data-num="" style="font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.35);padding-top:5px">02</span>
+                  <span style="display:block">
+                    <span data-opt-title="" style="display:block;font-family:'Campton';font-weight:600;font-size:16px;color:#ffffff">Servicios</span>
+                    <span style="display:block;margin-top:4px;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.5)">Ensayos, caracterización de materiales y asesoría técnica</span>
+                  </span>
+                  <span data-tick="" style="opacity:0;padding-top:4px;transition:opacity .25s ease">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc4425" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>
+                  </span>
+                </button>
+                <button type="button" data-chip="Colaboración" onClick="{{ pickMotivo }}" style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;width:100%;text-align:left;background:transparent;border:none;border-top:1px solid rgba(255,255,255,.07);padding:18px 24px;cursor:pointer;transition:background .25s ease">
+                  <span data-num="" style="font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.35);padding-top:5px">03</span>
+                  <span style="display:block">
+                    <span data-opt-title="" style="display:block;font-family:'Campton';font-weight:600;font-size:16px;color:#ffffff">Colaboración</span>
+                    <span style="display:block;margin-top:4px;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.5)">Alianzas con empresas, centros de investigación y universidades</span>
+                  </span>
+                  <span data-tick="" style="opacity:0;padding-top:4px;transition:opacity .25s ease">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc4425" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>
+                  </span>
+                </button>
+                <button type="button" data-chip="Prensa" onClick="{{ pickMotivo }}" style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;width:100%;text-align:left;background:transparent;border:none;border-top:1px solid rgba(255,255,255,.07);padding:18px 24px;cursor:pointer;transition:background .25s ease">
+                  <span data-num="" style="font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.35);padding-top:5px">04</span>
+                  <span style="display:block">
+                    <span data-opt-title="" style="display:block;font-family:'Campton';font-weight:600;font-size:16px;color:#ffffff">Prensa</span>
+                    <span style="display:block;margin-top:4px;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.5)">Entrevistas, vocerías y material gráfico del centro</span>
+                  </span>
+                  <span data-tick="" style="opacity:0;padding-top:4px;transition:opacity .25s ease">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc4425" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>
+                  </span>
+                </button>
+                <button type="button" data-chip="Otro" onClick="{{ pickMotivo }}" style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start;width:100%;text-align:left;background:transparent;border:none;border-top:1px solid rgba(255,255,255,.07);padding:18px 24px;cursor:pointer;transition:background .25s ease">
+                  <span data-num="" style="font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.35);padding-top:5px">05</span>
+                  <span style="display:block">
+                    <span data-opt-title="" style="display:block;font-family:'Campton';font-weight:600;font-size:16px;color:#ffffff">Otro</span>
+                    <span style="display:block;margin-top:4px;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.5)">Cuéntanos de qué se trata y lo derivamos al equipo correcto</span>
+                  </span>
+                  <span data-tick="" style="opacity:0;padding-top:4px;transition:opacity .25s ease">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fc4425" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>
+                  </span>
+                </button>
+              </div>
+            </sc-if>
+          </div>
+          <sc-if value="{{ errMotivo }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:12px 0 0;font-family:'Campton';font-size:13px;color:#ff8f77">Selecciona un motivo para continuar.</p>
+          </sc-if>
+        </div>
+        <sc-if value="{{ isServicios }}" hint-placeholder-val="{{ false }}">
+          <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(12px,1.4vw,18px);animation:rise .45s cubic-bezier(.16,1,.3,1) both">
+            <input type="text" placeholder="Tipo de ensayo o servicio requerido" style="width:100%;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:#ffffff;font-family:'Campton';font-size:16px;padding:24px 26px;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)">
+            <input type="text" placeholder="Plazo estimado" style="width:100%;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:#ffffff;font-family:'Campton';font-size:16px;padding:24px 26px;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)">
+          </div>
+        </sc-if>
+        <sc-if value="{{ isColaboracion }}" hint-placeholder-val="{{ false }}">
+          <div style="grid-column:1/-1;animation:rise .45s cubic-bezier(.16,1,.3,1) both">
+            <select style="width:100%;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:rgba(255,255,255,.62);font-family:'Campton';font-size:16px;padding:24px 26px;appearance:none;transition:border-color .3s ease" style-focus="border-color:rgba(252,68,37,.7)">
+              <option style="color:#1e1728">Línea de interés</option>
+              <option style="color:#1e1728">L01 · Materias Primas Secundarias (MPS)</option>
+              <option style="color:#1e1728">L02 · Componentes Biobasados (CBB)</option>
+              <option style="color:#1e1728">L03 · Logística circular y procesos de reciclaje (LCPR)</option>
+              <option style="color:#1e1728">L04 · Sistemas constructivos sostenibles (IDSS)</option>
+            </select>
+          </div>
+        </sc-if>
+        <sc-if value="{{ isPrensa }}" hint-placeholder-val="{{ false }}">
+          <div style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(12px,1.4vw,18px);animation:rise .45s cubic-bezier(.16,1,.3,1) both">
+            <input type="text" placeholder="Medio" style="width:100%;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:#ffffff;font-family:'Campton';font-size:16px;padding:24px 26px;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)">
+            <input type="text" placeholder="Fecha límite" style="width:100%;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:#ffffff;font-family:'Campton';font-size:16px;padding:24px 26px;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)">
+          </div>
+        </sc-if>
+        <textarea rows="4" placeholder="Cuéntanos brevemente en qué podemos ayudar" style="grid-column:1/-1;width:100%;background:rgba(255,255,255,.05);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;color:#ffffff;font-family:'Campton';font-size:16px;line-height:1.5;padding:24px 26px;resize:vertical;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)"></textarea>
+        <div style="grid-column:1/-1">
+          <label style="display:flex;gap:14px;align-items:flex-start;cursor:pointer">
+            <input ref="{{ refConsent }}" type="checkbox" style="width:20px;height:20px;margin:2px 0 0;accent-color:#fc4425;flex:0 0 auto;cursor:pointer">
+            <span style="font-family:'Campton';font-size:14px;line-height:1.55;color:rgba(255,255,255,.68)">Autorizo a CIMAC a tratar mis datos para responder esta consulta, conforme a la <a href="#top" style="color:#ffffff;border-bottom:1px solid rgba(255,255,255,.35)" style-hover="color:#fc4425">política de privacidad</a>.</span>
+          </label>
+          <sc-if value="{{ errConsent }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:10px 0 0 34px;font-family:'Campton';font-size:13px;color:#ff8f77">Necesitamos tu autorización para responderte.</p>
+          </sc-if>
+        </div>
+        <div style="grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:clamp(8px,1.2vw,18px)">
+          <p style="margin:0;font-family:'Campton';font-size:13px;color:rgba(255,255,255,.45)">Los campos con * son obligatorios.</p>
+          <button ref="{{ refSubmit }}" type="submit" style="display:inline-flex;align-items:center;gap:14px;background:transparent;color:#ffffff;border:1px solid rgba(255,255,255,.28);border-radius:999px;font-family:'Campton';font-weight:600;font-size:17px;padding:22px 36px;cursor:pointer;transition:background .35s ease,border-color .35s ease,transform .4s cubic-bezier(.16,1,.3,1),opacity .3s ease" style-hover="transform:translateY(-3px)">Enviar mensaje
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+          </button>
+        </div>
+      </form>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="background:#16111f;color:#ffffff;padding:clamp(20px,3vw,44px) clamp(16px,3.5vw,48px) clamp(24px,3vw,44px)">
+    <div style="position:relative;overflow:hidden;border-radius:clamp(18px,2vw,28px);border:1px solid rgba(255,255,255,.07);background:#1a1424">
+      <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,3vw,48px);align-items:center;padding:clamp(28px,3.4vw,52px) clamp(22px,3vw,56px);border-bottom:1px solid rgba(255,255,255,.08)">
+        <div>
+          <p style="margin:0 0 12px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Newsletter</p>
+          <p style="margin:0;font-family:'Campton';font-size:clamp(15px,1.2vw,18px);line-height:1.55;color:rgba(255,255,255,.82);max-width:34ch">Noticias del centro, convocatorias abiertas y avances de nuestras líneas de investigación.</p>
+        </div>
+        <form onSubmit="{{ onSubmit }}" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end">
+          <span style="position:relative;display:flex;align-items:center;flex:1 1 240px;max-width:360px">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;left:22px"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 6.5 8.5 6 8.5-6"></path></svg>
+            <input type="email" placeholder="tu@correo.cl" style="width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#ffffff;font-family:'Campton';font-size:15px;padding:17px 24px 17px 52px;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)">
+          </span>
+          <button type="submit" style="background:#ffffff;color:#1e1728;border:none;border-radius:999px;font-family:'Campton';font-weight:600;font-size:15px;padding:17px 32px;cursor:pointer;transition:background .3s ease,color .3s ease,transform .4s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">Suscribirme</button>
+        </form>
+      </div>
+      <div style="position:relative;display:flex;flex-wrap:wrap;gap:clamp(28px,3.4vw,56px);padding:clamp(32px,4vw,64px) clamp(22px,3vw,56px)">
+        <div style="flex:1 1 300px;min-width:0;max-width:420px">
+          <img src="assets/cimac-wordmark-white.png" alt="CIMAC" style="width:min(100%,150px);height:auto;display:block">
+          <p style="margin:22px 0 0;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.6);max-width:38ch">Centro de Innovación en Tecnología de Materiales de la Universidad de Santiago de Chile. Investigación, transferencia tecnológica y servicios para el entorno construido.</p>
+          <img src="assets/anid-white.png" alt="ANID · Ministerio de Ciencia, Tecnología, Conocimiento e Innovación · Gobierno de Chile" style="margin-top:30px;width:auto;height:clamp(72px,7vw,96px);max-width:100%;display:block;opacity:.8">
+        </div>
+        <div style="flex:1 1 170px;min-width:0">
+          <p style="margin:0 0 22px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Áreas</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <a href="#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Investigación</a>
+            <a href="#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Transferencia Tecnológica</a>
+            <a href="#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Laboratorios</a>
+            <a href="#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Servicios</a>
+            <a href="#proyectos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Proyectos</a>
+            <a href="#contacto" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Súmate</a>
+          </div>
+        </div>
+        <div style="flex:1 1 170px;min-width:0">
+          <p style="margin:0 0 22px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Centro</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <a href="#nosotros" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Nosotros</a>
+            <a href="#actualidad" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Noticias y Eventos</a>
+            <a href="#contacto" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Contacto</a>
+            <a href="#top" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Transparencia</a>
+          </div>
+        </div>
+        <div style="flex:1 1 190px;min-width:0">
+          <p style="margin:0 0 22px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Conecta</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <a href="#top" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>Instagram</a>
+            <a href="#top" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7.5 10.5V17M7.5 7.2v.1M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"></path></svg>LinkedIn</a>
+            <a href="mailto:contacto@cimac.cl" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 6.5 8.5 6 8.5-6"></path></svg>Email</a>
+            <a href="tel:+56200000000" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4h2c.7 0 1.3.5 1.5 1.2l.6 2.4c.1.6-.1 1.2-.6 1.5l-1.2.8a12 12 0 0 0 5.3 5.3l.8-1.2c.3-.5.9-.7 1.5-.6l2.4.6c.7.2 1.2.8 1.2 1.5v2c0 .8-.7 1.5-1.5 1.5A15 15 0 0 1 4 5.5Z"></path></svg>+56 2 XXXX XXXX</a>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center;padding:clamp(20px,2.2vw,28px) clamp(22px,3vw,56px);border-top:1px solid rgba(255,255,255,.08)">
+        <p style="margin:0;font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)">© 2026 CIMAC · Universidad de Santiago de Chile</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
+          <a href="#top" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">Términos y condiciones</a>
+          <a href="#top" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">Política de privacidad</a>
+          <a href="mailto:contacto@cimac.cl" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">contacto@cimac.cl</a>
+          <p style="margin:0;font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)">Desarrollado por <a href="https://deltadigital.cl" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7)" style-hover="color:#fc4425">Delta Digital</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ showWhatsapp }}" hint-placeholder-val="{{ true }}">
+    <a href="https://wa.me/56200000000" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:55;width:50px;height:50px;border-radius:13px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(252,68,37,.34);transition:transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-4px) scale(1.04)">
+      <img src="assets/whatsapp.png" alt="" width="50" height="50" style="display:block;width:100%;height:100%;object-fit:cover">
+    </a>
+  </sc-if>
+
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;pinnedScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Interacción&quot;},&quot;showCampaign&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;},&quot;showWhatsapp&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;}}">
+class Component extends DCLogic {
+  state = {
+    menu: false,
+    isDesktop: typeof window !== 'undefined' ? window.innerWidth >= 1000 : true,
+    motivo: '',
+    motivoOpen: false,
+    sent: false,
+    err: {}
+  };
+
+  constructor(props) {
+    super(props);
+    this.root = React.createRef();
+    this.raf = null;
+    this.refNombre = React.createRef();
+    this.refCorreo = React.createRef();
+    this.refConsent = React.createRef();
+    this.refSubmit = React.createRef();
+  }
+
+  setupCTAs() {
+    const root = this.root.current;
+    if (!root) return;
+    const lum = c => {
+      const m = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(c || '');
+      if (!m) return 1;
+      return (0.299 * +m[1] + 0.587 * +m[2] + 0.114 * +m[3]) / 255;
+    };
+    root.querySelectorAll('a,button').forEach(el => {
+      const cs = getComputedStyle(el);
+      if (parseFloat(cs.borderTopLeftRadius) < 40) return;
+      if (el.hasAttribute('data-chip') || el.hasAttribute('aria-label')) return;
+
+      // Base palette is computed once and cached: React re-renders rewrite the
+      // style attribute, so re-deriving it each pass would drift.
+      if (!el.dataset.ctaBase) {
+        const s = (el.getAttribute('style') || '').replace(/\s+/g, '').toLowerCase();
+        const host = el.closest('section,footer');
+        const dark = host ? lum(getComputedStyle(host).backgroundColor) < 0.5 : true;
+        const filled = s.includes('background:#fc4425') || s.includes('background:rgb(252,68,37)') || ((s.includes('background:#ffffff') || s.includes('background:rgb(255,255,255)')) && dark);
+        const secondary = !filled;
+        el.dataset.ctaBase = JSON.stringify({
+          color: secondary ? (dark ? '#ffffff' : '#1e1728') : (dark ? '#1e1728' : '#ffffff'),
+          bg: secondary ? 'transparent' : (dark ? '#ffffff' : '#1e1728'),
+          border: secondary ? (dark ? 'rgba(255,255,255,.28)' : 'rgba(30,23,40,.22)') : 'transparent'
+        });
+      }
+      const base = JSON.parse(el.dataset.ctaBase);
+
+      let inner = el.querySelector(':scope > [data-cta-label]');
+      if (!inner) {
+        inner = document.createElement('span');
+        inner.setAttribute('data-cta-label', '');
+        inner.style.cssText = 'position:relative;z-index:1;display:inline-flex;align-items:center;gap:10px;white-space:nowrap';
+      }
+      let sweep = el.querySelector(':scope > [data-cta-sweep]');
+      if (!sweep) {
+        sweep = document.createElement('span');
+        sweep.setAttribute('data-cta-sweep', '');
+        sweep.style.cssText = 'position:absolute;inset:0;background:#fc4425;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1);z-index:0;pointer-events:none';
+      }
+      // Adopt anything React re-inserted as a direct child back into the label.
+      [...el.childNodes].forEach(n => { if (n !== inner && n !== sweep) inner.appendChild(n); });
+      if (el.firstChild !== sweep) el.appendChild(sweep);
+      if (sweep.nextSibling !== inner) el.appendChild(inner);
+
+      const hovering = el.dataset.ctaOn === '1';
+      const set = (p, v) => el.style.setProperty(p, v, 'important');
+      set('position', 'relative');
+      set('overflow', 'hidden');
+      set('isolation', 'isolate');
+      set('border-style', 'solid');
+      set('border-width', '1px');
+      set('background', base.bg);
+      set('transform', 'none');
+      set('transition', 'color .35s ease,border-color .4s ease');
+      set('color', hovering ? '#ffffff' : base.color);
+      set('border-color', hovering ? '#fc4425' : base.border);
+      void sweep.offsetWidth; // flush so the first hover animates instead of snapping
+
+      if (el.dataset.ctaBound) return;
+      el.dataset.ctaBound = '1';
+      const paint = on => {
+        el.dataset.ctaOn = on ? '1' : '0';
+        sweep.style.transformOrigin = on ? 'left' : 'right';
+        sweep.style.transform = on ? 'scaleX(1)' : 'scaleX(0)';
+        el.style.setProperty('color', on ? '#ffffff' : base.color, 'important');
+        el.style.setProperty('border-color', on ? '#fc4425' : base.border, 'important');
+        el.style.setProperty('background', base.bg, 'important');
+        el.style.setProperty('transform', 'none', 'important');
+      };
+      el.addEventListener('mouseenter', () => paint(true));
+      el.addEventListener('mouseleave', () => paint(false));
+      el.addEventListener('focus', () => paint(true));
+      el.addEventListener('blur', () => paint(false));
+    });
+  }
+
+  paintChips() {
+    const root = this.root.current;
+    if (!root) return;
+    root.querySelectorAll('[data-chip]').forEach(c => {
+      const on = c.dataset.chip === this.state.motivo;
+      c.dataset.optOn = on ? '1' : '0';
+      c.style.background = on ? 'rgba(252,68,37,.12)' : 'transparent';
+      const t = c.querySelector('[data-opt-title]');
+      if (t) t.style.color = on ? '#fc4425' : '#ffffff';
+      const n = c.querySelector('[data-num]');
+      if (n) n.style.color = on ? '#fc4425' : 'rgba(255,255,255,.35)';
+      const tick = c.querySelector('[data-tick]');
+      if (tick) tick.style.opacity = on ? '1' : '0';
+      if (!c.dataset.optBound) {
+        c.dataset.optBound = '1';
+        const tint = hover => {
+          const sel = c.dataset.optOn === '1';
+          c.style.background = sel ? 'rgba(252,68,37,.12)' : (hover ? 'rgba(255,255,255,.05)' : 'transparent');
+        };
+        c.addEventListener('mouseenter', () => tint(true));
+        c.addEventListener('mouseleave', () => tint(false));
+        c.addEventListener('focus', () => tint(true));
+        c.addEventListener('blur', () => tint(false));
+      }
+    });
+    const chev = root.querySelector('[data-motivo-chev]');
+    if (chev) chev.style.transform = this.state.motivoOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+    const trig = root.querySelector('[data-motivo-trigger]');
+    if (trig) {
+      trig.style.borderColor = this.state.motivoOpen ? 'rgba(252,68,37,.7)'
+        : (this.state.err.motivo ? 'rgba(255,143,119,.55)' : 'rgba(255,255,255,.09)');
+      trig.style.background = this.state.motivoOpen ? 'rgba(255,255,255,.08)' : 'rgba(255,255,255,.05)';
+    }
+    const lbl = root.querySelector('[data-motivo-label]');
+    if (lbl) lbl.style.color = this.state.motivo ? '#ffffff' : 'rgba(255,255,255,.5)';
+  }
+
+  renderVals() {
+    return {
+      root: this.root,
+      menu: this.state.menu,
+      isDesktop: this.state.isDesktop,
+      showCampaign: this.props.showCampaign !== false,
+      showWhatsapp: this.props.showWhatsapp !== false,
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      closeMenu: () => this.setState({ menu: false }),
+      onSubmit: e => { e.preventDefault(); },
+      refNombre: this.refNombre,
+      refCorreo: this.refCorreo,
+      refConsent: this.refConsent,
+      refSubmit: this.refSubmit,
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      isServicios: this.state.motivo === 'Servicios',
+      isColaboracion: this.state.motivo === 'Colaboración',
+      isPrensa: this.state.motivo === 'Prensa',
+      errMotivo: !!this.state.err.motivo,
+      errNombre: !!this.state.err.nombre,
+      errCorreo: !!this.state.err.correo,
+      errConsent: !!this.state.err.consent,
+      motivoOpen: this.state.motivoOpen,
+      motivoLabel: this.state.motivo || 'Motivo de contacto *',
+      toggleMotivo: () => this.setState(s => ({ motivoOpen: !s.motivoOpen })),
+      pickMotivo: e => {
+        const v = e.currentTarget.dataset.chip;
+        this.setState(s => ({ motivo: v, motivoOpen: false, err: Object.assign({}, s.err, { motivo: false }) }));
+      },
+      resetForm: () => this.setState({ sent: false, motivo: '', motivoOpen: false, err: {} }),
+      submitForm: e => {
+        e.preventDefault();
+        const nombre = this.refNombre.current ? this.refNombre.current.value.trim() : '';
+        const correo = this.refCorreo.current ? this.refCorreo.current.value.trim() : '';
+        const consent = this.refConsent.current ? this.refConsent.current.checked : false;
+        const err = {
+          motivo: !this.state.motivo,
+          nombre: nombre.length < 2,
+          correo: !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(correo),
+          consent: !consent
+        };
+        if (err.motivo || err.nombre || err.correo || err.consent) {
+          this.setState({ err: err });
+          return;
+        }
+        this.setState({ err: {} });
+        const btn = this.refSubmit.current;
+        if (btn) {
+          btn.style.opacity = '.62';
+          btn.style.pointerEvents = 'none';
+          const lbl = btn.querySelector('[data-cta-label]') || btn;
+          const tn = Array.prototype.find.call(lbl.childNodes, n => n.nodeType === 3 && n.nodeValue.trim());
+          if (tn) tn.nodeValue = 'Enviando… ';
+        }
+        setTimeout(() => this.setState({ sent: true }), 1100);
+      }
+    };
+  }
+
+  initLenis(tries) {
+    const L = window.Lenis || (window.lenis && window.lenis.default);
+    if (!L) {
+      if ((tries || 0) < 40) setTimeout(() => this.initLenis((tries || 0) + 1), 100);
+      return;
+    }
+    if (this.lenis) return;
+    // The page scrolls on <body>, so Lenis needs it as the wrapper.
+    const bodyScrolls = document.body.scrollHeight > document.body.clientHeight + 1 &&
+      /auto|scroll/.test(getComputedStyle(document.body).overflowY);
+    const opts = {
+      duration: 1.2,
+      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true
+    };
+    if (bodyScrolls) { opts.wrapper = document.body; opts.content = document.body; }
+    this.lenis = new L(opts);
+    // Lenis can wrap a scroller our native listeners never see, so poll the
+    // scroll position on its frame loop and run our scroll work when it moves.
+    const watch = () => {
+      const y = (this.lenis && this.lenis.scroll) || window.scrollY || 0;
+      if (y !== this.lastY) { this.lastY = y; this.onScroll(); }
+      this.watchRaf = requestAnimationFrame(watch);
+    };
+    this.watchRaf = requestAnimationFrame(watch);
+    document.documentElement.style.scrollBehavior = 'auto';
+    // Keep our scroll-driven work (pins, stat reveals) on Lenis' frame.
+    this.lenis.on('scroll', () => this.onScroll());
+    if (window.gsap && window.ScrollTrigger) {
+      this.lenis.on('scroll', window.ScrollTrigger.update);
+      window.gsap.ticker.add(t => this.lenis.raf(t * 1000));
+      window.gsap.ticker.lagSmoothing(0);
+    } else {
+      const raf = time => { if (!this.lenis) return; this.lenis.raf(time); this.lenisRaf = requestAnimationFrame(raf); };
+      this.lenisRaf = requestAnimationFrame(raf);
+    }
+    // Anchor links go through Lenis so in-page jumps stay smooth.
+    this.onAnchor = e => {
+      const a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if (!a) return;
+      const id = a.getAttribute('href');
+      if (!id || id === '#') return;
+      const tgt = document.querySelector(id);
+      if (!tgt) return;
+      e.preventDefault();
+      this.lenis.scrollTo(tgt, { offset: 0 });
+    };
+    document.addEventListener('click', this.onAnchor);
+  }
+
+  componentDidMount() {
+    this.initLenis(0);
+    this.onResize = () => {
+      const d = window.innerWidth >= 1000;
+      if (d !== this.state.isDesktop) this.setState({ isDesktop: d });
+      this.layoutPins();
+      this.onScroll();
+      this.syncCaseHeight();
+      this.syncTouchCTAs();
+    };
+    this.onScrollHandler = () => {
+      if (this.raf) return;
+      this.raf = requestAnimationFrame(() => { this.raf = null; this.onScroll(); });
+    };
+    this.onDocDown = e => {
+      if (!this.state.motivoOpen) return;
+      const box = e.target.closest ? e.target.closest('[data-motivo]') : null;
+      if (!box) this.setState({ motivoOpen: false });
+    };
+    this.onKeyDown = e => { if (e.key === 'Escape' && this.state.motivoOpen) this.setState({ motivoOpen: false }); };
+    document.addEventListener('pointerdown', this.onDocDown, true);
+    document.addEventListener('keydown', this.onKeyDown);
+    window.addEventListener('resize', this.onResize);
+    window.addEventListener('scroll', this.onScrollHandler, { passive: true });
+    document.addEventListener('scroll', this.onScrollHandler, { passive: true, capture: true });
+    this.setupLoader();
+    this.setupPingPongVideo();
+    this.setupLensVideo();
+    this.setupHovers();
+    this.setupCounters();
+    this.layoutPins();
+    this.onScroll();
+    this.paintChips();
+    this.setupCTAs();
+    this.syncTouchCTAs();
+    this.syncCaseHeight();
+    setTimeout(() => this.syncCaseHeight(), 500);
+  }
+
+  componentDidUpdate() { this.layoutPins(); this.onScroll(); this.paintChips(); this.setupHovers(); this.syncTouchCTAs(); this.setupCTAs(); this.setupCounters(); this.setupPingPongVideo(); this.setupLensVideo(); }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.onScrollHandler);
+    document.removeEventListener('scroll', this.onScrollHandler, { capture: true });
+    if (this.onAnchor) document.removeEventListener('click', this.onAnchor);
+    if (this.onDocDown) document.removeEventListener('pointerdown', this.onDocDown, true);
+    if (this.onKeyDown) document.removeEventListener('keydown', this.onKeyDown);
+    if (this.lenisRaf) cancelAnimationFrame(this.lenisRaf);
+    if (this.watchRaf) cancelAnimationFrame(this.watchRaf);
+    if (this.revRaf) cancelAnimationFrame(this.revRaf);
+    if (this.glassRaf) cancelAnimationFrame(this.glassRaf);
+    if (this.onGlassResize) window.removeEventListener('resize', this.onGlassResize);
+    if (this.lenis) { this.lenis.destroy(); this.lenis = null; }
+    if (this.io) this.io.disconnect();
+  }
+
+  pinned() { return this.props.pinnedScroll !== false && window.innerWidth >= 1000; }
+
+  layoutPins() {
+    const root = this.root.current;
+    if (!root) return;
+    const on = this.pinned();
+    const narrow = window.innerWidth < 800;
+    // the case photo fills the card height on desktop; on mobile it needs a
+    // ratio of its own or it would collapse
+    root.querySelectorAll('[data-casephoto]').forEach(p => { p.style.aspectRatio = narrow ? '4/3' : ''; });
+    root.querySelectorAll('[data-cols]').forEach(g => {
+      const n = narrow ? 1 : parseInt(g.dataset.cols, 10) || 2;
+      g.style.gridTemplateColumns = 'repeat(' + n + ',minmax(0,1fr))';
+    });
+    root.querySelectorAll('[data-pin]').forEach(sec => {
+      const wrap = sec.querySelector('[data-pin-wrap]');
+      const stick = sec.querySelector('[data-pin-stick]');
+      const track = sec.querySelector('[data-track]');
+      if (!wrap || !stick || !track) return;
+      // Below 800px the "qué hacemos" rail stacks as cards; the team rail stays
+      // a horizontal carousel you can swipe.
+      const stacked = narrow && sec.id !== 'nosotros';
+      [...track.children].forEach(ch => {
+        if (ch.dataset.ow === undefined) { // remember the authored values once
+          ch.dataset.ow = ch.style.width;
+          ch.dataset.of = ch.style.flex;
+          ch.dataset.oh = ch.style.height;
+          ch.dataset.os = ch.style.scrollSnapAlign;
+        }
+        ch.style.width = stacked ? '100%' : ch.dataset.ow;
+        ch.style.flex = stacked ? '0 0 auto' : ch.dataset.of;
+        ch.style.height = stacked ? 'auto' : ch.dataset.oh;
+        ch.style.scrollSnapAlign = stacked ? 'none' : ch.dataset.os;
+      });
+      const rail = sec.querySelector('[data-rail]');
+      if (rail) rail.style.display = stacked ? 'none' : '';
+      if (stacked) {
+        wrap.style.height = '';
+        stick.style.position = '';
+        stick.style.top = '';
+        stick.style.minHeight = '';
+        stick.style.display = '';
+        stick.style.flexDirection = '';
+        stick.style.justifyContent = '';
+        stick.style.overflow = '';
+        track.style.transform = '';
+        track.style.overflowX = 'visible';
+        track.style.scrollSnapType = 'none';
+        track.style.width = '';
+        track.style.flexDirection = 'column';
+        track.style.alignItems = 'stretch';
+        return;
+      }
+      track.style.flexDirection = '';
+      track.style.alignItems = '';
+      if (on) {
+        const overflow = Math.max(0, track.scrollWidth - window.innerWidth);
+        // extra hold after the last card so the hand-off to vertical scroll isn't abrupt
+        this.pinHold = window.innerHeight * 0.65;
+        wrap.style.height = (window.innerHeight + overflow * 1.15 + this.pinHold) + 'px';
+        stick.style.position = 'sticky';
+        stick.style.top = '0px';
+        stick.style.minHeight = '100vh';
+        stick.style.display = 'flex';
+        stick.style.flexDirection = 'column';
+        stick.style.justifyContent = 'center';
+        stick.style.overflow = 'hidden';
+        track.style.overflowX = 'visible';
+        track.style.scrollSnapType = 'none';
+        track.style.width = 'max-content';
+      } else {
+        wrap.style.height = '';
+        stick.style.position = '';
+        stick.style.top = '';
+        stick.style.minHeight = '';
+        stick.style.display = '';
+        stick.style.flexDirection = '';
+        stick.style.justifyContent = '';
+        stick.style.overflow = '';
+        track.style.transform = '';
+        track.style.overflowX = 'auto';
+        track.style.scrollSnapType = 'x mandatory';
+        track.style.width = '';
+        if (!track.dataset.railBound) {
+          track.dataset.railBound = '1';
+          track.addEventListener('scroll', () => {
+            const max = track.scrollWidth - track.clientWidth;
+            this.paintDots(track.closest('[data-pin]'), max > 0 ? track.scrollLeft / max : 0);
+          }, { passive: true });
+        }
+      }
+    });
+  }
+
+  // Keep the case-study card exactly as tall as a project card.
+  syncCaseHeight() {
+    const root = this.root.current;
+    if (!root) return;
+    const card = root.querySelector('[data-casecard]');
+    const ref = root.querySelector('[data-projcard]:not([data-casecard])');
+    if (!card || !ref) return;
+    card.style.height = window.innerWidth >= 700 ? ref.getBoundingClientRect().height + 'px' : '';
+  }
+
+  paintDots(sec, p) {
+    if (!sec) return;
+    const dots = sec.querySelectorAll('[data-dot]');
+    const idx = Math.round(p * (dots.length - 1));
+    dots.forEach((d, i) => {
+      d.style.background = i <= idx ? '#fc4425' : 'rgba(255,255,255,.25)';
+    });
+  }
+
+  onScroll() {
+    const root = this.root.current;
+    if (!root) return;
+    this.revealStats();
+    const y = window.scrollY || window.pageYOffset;
+
+    const header = root.querySelector('[data-header]');
+    if (header) {
+      const solid = y > 40;
+      header.style.background = solid ? 'rgba(22,17,31,.92)' : 'transparent';
+      header.style.backdropFilter = solid ? 'saturate(140%) blur(14px)' : 'none';
+      header.style.borderBottomColor = solid ? 'rgba(255,255,255,.1)' : 'transparent';
+    }
+
+    if (this.pinned()) {
+      root.querySelectorAll('[data-pin]').forEach(sec => {
+        const wrap = sec.querySelector('[data-pin-wrap]');
+        const track = sec.querySelector('[data-track]');
+        if (!wrap || !track) return;
+        const total = wrap.offsetHeight - window.innerHeight;
+        if (total <= 0) return;
+        const travel = Math.max(1, total - (this.pinHold || 0));
+        const p = Math.min(1, Math.max(0, -wrap.getBoundingClientRect().top / travel));
+        const overflow = Math.max(0, track.scrollWidth - window.innerWidth);
+        track.style.transform = 'translate3d(' + (-overflow * p) + 'px,0,0)';
+        this.paintDots(sec, p);
+      });
+    }
+
+    const vh = window.innerHeight;
+    root.querySelectorAll('[data-parallax]').forEach(el => {
+      const r = el.getBoundingClientRect();
+      const rel = (r.top + r.height / 2 - vh / 2) / vh;
+      el.style.transform = 'translate3d(0,' + (rel * -18).toFixed(2) + 'px,0)';
+    });
+  }
+
+  // Ping-pong playback: forward with the native player, backwards by stepping
+  // currentTime on a rAF loop (negative playbackRate isn't supported).
+  // Orange curtain with the white mark: the logo fades out, then the panel
+  // slides up to reveal the hero once the page (and its media) is ready.
+  setupLoader() {
+    const root = this.root.current;
+    if (!root) return;
+    const el = root.querySelector('[data-loader]');
+    if (!el || el.dataset.done) return;
+    el.dataset.done = '1';
+    const logo = el.querySelector('[data-loader-logo]');
+    let gone = false;
+    const reveal = () => {
+      if (gone) return;
+      gone = true;
+      if (logo) { logo.style.opacity = '0'; logo.style.transform = 'scale(.94)'; }
+      setTimeout(() => {
+        el.style.transform = 'translateY(-100%)';
+        setTimeout(() => { el.style.display = 'none'; }, 1000);
+      }, 380);
+    };
+    const t0 = performance.now();
+    const whenReady = () => setTimeout(reveal, Math.max(0, 900 - (performance.now() - t0)));
+    if (document.readyState === 'complete') whenReady();
+    else window.addEventListener('load', whenReady, {once: true});
+    setTimeout(reveal, 4500); // never trap the page behind a slow asset
+  }
+
+  setupPingPongVideo() {
+    const root = this.root.current;
+    if (!root) return;
+    const v = root.querySelector('[data-hero-video]');
+    if (!v) return;
+    // Re-arm when the node changed, the loop died, or this code is newer than
+    // the loop currently driving it (bump PPV after editing the loop).
+    const PPV = '7lens';
+    if (v.dataset.ppv === PPV && window.__cimacPingRaf) return;
+    v.dataset.ppv = PPV;
+    // Only ever one loop alive: a hot reload or remount would otherwise leave
+    // the old rAF loops running and starve the page (and the video decoder).
+    if (window.__cimacPingRaf) cancelAnimationFrame(window.__cimacPingRaf);
+    const gen = window.__cimacPingGen = (window.__cimacPingGen || 0) + 1;
+    v.loop = false;
+    // Seeking backwards in a video element stalls, so the first forward pass is
+    // recorded into a small frame buffer and the ping-pong runs off that buffer.
+    const CAPFPS = 20;   // captured frames per second of media
+    const FPS = 10;      // playback frames per second (media time is stretched 2x)
+    const CAPW = 480;
+    const MAXF = 220; // cap the buffer so long clips stay light on memory
+    // the captured buffer is kept on window so reloads reuse it
+    const pp = window.__cimacPP = window.__cimacPP || {frames: [], idx: 0, dir: 1, buffered: false};
+    if (pp.frames.length <= 24) { pp.frames.length = 0; pp.buffered = false; }
+    if (!pp.buffered) { pp.idx = 0; pp.dir = 1; }
+    let nextT = 0.3, lastT = 0; // skip the clip's head: the first frames are often black
+    // half speed: a 5s clip reads as 10s forward and 10s back
+    v.playbackRate = 0.5;
+    const play = () => { v.playbackRate = 0.5; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+
+    const capture = () => {
+      const w = CAPW;
+      const h = Math.round(CAPW * (v.videoHeight || 720) / (v.videoWidth || 1280));
+      const cv = document.createElement('canvas');
+      cv.width = w; cv.height = h;
+      cv.getContext('2d').drawImage(v, 0, 0, w, h);
+      pp.frames.push(cv);
+    };
+
+    // Fallback for windows that refuse autoplay: seeking works even when the
+    // player will not run, so the buffer is built one seek at a time.
+    let seekCapturing = false;
+    const captureBySeek = () => {
+      if (seekCapturing) return;
+      seekCapturing = true;
+      const dur = v.duration || 0;
+      let t2 = 0.3;
+      const step = () => {
+        if (gen !== window.__cimacPingGen) return;
+        if (t2 >= dur - 1 / CAPFPS || pp.frames.length >= MAXF) {
+          if (pp.frames.length > 24) {
+            pp.frames = this.trimDarkFrames(pp.frames);
+            pp.buffered = true;
+            pp.idx = pp.frames.length - 1;
+            pp.dir = -1;
+          }
+          v.removeEventListener('seeked', onSeeked);
+          return;
+        }
+        v.currentTime = t2;
+        t2 += 1 / CAPFPS;
+      };
+      const onSeeked = () => { capture(); step(); };
+      v.addEventListener('seeked', onSeeked);
+      step();
+    };
+
+    let stallAt = 0;
+    const tick = t => {
+      if (gen !== window.__cimacPingGen) return; // superseded by a newer loop
+      this.revRaf = window.__cimacPingRaf = requestAnimationFrame(tick);
+      const dt = lastT ? Math.min(0.1, (t - lastT) / 1000) : 0;
+      lastT = t;
+      const dur = v.duration || 0;
+      if (!pp.buffered) {
+        if (seekCapturing) return;
+        if (!v.videoWidth || !dur) { if (v.paused) play(); return; }
+        if (v.paused && !v.ended) play();
+        // no progress after a second and a half → playback is being blocked
+        if (v.currentTime < 0.05) {
+          if (!stallAt) stallAt = t;
+          else if (t - stallAt > 1500) { captureBySeek(); return; }
+        } else stallAt = 0;
+        if (v.currentTime >= nextT) { capture(); nextT = v.currentTime + 1 / CAPFPS; }
+        if (v.ended || pp.frames.length >= MAXF || (dur && v.currentTime >= dur - 1 / CAPFPS)) {
+          // a short buffer means the pass was captured while the page was busy:
+          // start the recording over instead of ping-ponging a handful of frames
+          if (pp.frames.length < 24) {
+            pp.frames.length = 0;
+            nextT = 0.3;
+            v.currentTime = 0;
+            play();
+            return;
+          }
+          pp.frames = this.trimDarkFrames(pp.frames);
+          pp.buffered = true;
+          pp.idx = pp.frames.length - 1;
+          pp.dir = -1;
+          // keep the element running: the lens draws its sharp disc from the
+          // live video, so the capture resolution never shows on screen
+          v.loop = true;
+          play();
+        }
+        return;
+      }
+      // ping-pong through the captured frames, forever, with no seeking
+      pp.idx += pp.dir * dt * FPS;
+      if (pp.idx >= pp.frames.length - 1) { pp.idx = pp.frames.length - 1; pp.dir = -1; }
+      else if (pp.idx <= 0) { pp.idx = 0; pp.dir = 1; }
+    };
+    // Autoplay can be refused in a fresh window (or the tab may load hidden),
+    // which would leave the capture pass stuck on frame one: retry on the first
+    // interaction and whenever the tab becomes visible again.
+    const kick = () => { if (!pp.buffered && v.paused) play(); };
+    ['pointerdown', 'keydown', 'wheel', 'touchstart', 'mousemove'].forEach(ev =>
+      window.addEventListener(ev, kick, {passive: true}));
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) kick(); });
+    v.loop = true; play();
+    this.revRaf = window.__cimacPingRaf = requestAnimationFrame(tick);
+  }
+
+  // Drop near-black frames at either end of the buffer, so the turnaround
+  // never lands on the clip's fade-in/out and reads as a blink.
+  trimDarkFrames(frames) {
+    const lum = cv => {
+      const s = document.createElement('canvas');
+      s.width = 8; s.height = 8;
+      const c2 = s.getContext('2d');
+      c2.drawImage(cv, 0, 0, 8, 8);
+      const d = c2.getImageData(0, 0, 8, 8).data;
+      let t = 0;
+      for (let i = 0; i < d.length; i += 4) t += (d[i] + d[i + 1] + d[i + 2]) / 3;
+      return t / (d.length / 4);
+    };
+    const ls = frames.map(lum);
+    const sorted = ls.slice().sort((a, b) => a - b);
+    const median = sorted[Math.floor(sorted.length / 2)] || 1;
+    const floor = median * 0.5;
+    let a = 0, b = frames.length - 1;
+    while (a < b && ls[a] < floor) a++;
+    while (b > a && ls[b] < floor) b--;
+    return (b - a > 4) ? frames.slice(a, b + 1) : frames;
+  }
+
+  // Frosted-lens pass: the ping-pong frame is painted twice — a heavily
+  // blurred full-bleed bed, and a sharp copy revealed only under the cursor
+  // through a soft radial mask that eases toward the pointer.
+  setupLensVideo() {
+    const root = this.root.current;
+    if (!root) return;
+    const v = root.querySelector('[data-hero-video]');
+    const c = root.querySelector('[data-hero-lens]');
+    const b = root.querySelector('[data-hero-blur]');
+    if (!v || !c || !b) return;
+    const GV = '21';
+    if (c.dataset.gv === GV && window.__cimacGlassRaf) return;
+    c.dataset.gv = GV;
+    if (window.__cimacGlassRaf) cancelAnimationFrame(window.__cimacGlassRaf);
+    const ggen = window.__cimacGlassGen = (window.__cimacGlassGen || 0) + 1;
+    const ctx = c.getContext('2d');
+    const bctx = b.getContext('2d');
+    let W = 0, H = 0, BW = 0, BH = 0;
+    const resize = () => {
+      const r = c.getBoundingClientRect();
+      const dpr = Math.min(1.5, window.devicePixelRatio || 1);
+      this.lensDpr = dpr;
+      W = Math.max(1, Math.round(r.width * dpr));
+      H = Math.max(1, Math.round(r.height * dpr));
+      if (c.width !== W) c.width = W;
+      if (c.height !== H) c.height = H;
+      // the bed is tiny on purpose: upscaling 160px to full width IS most of
+      // the blur, so the CSS filter only has to soften what is left
+      BW = 160; BH = Math.max(1, Math.round(BW * (r.height || 1) / (r.width || 1)));
+      if (b.width !== BW) b.width = BW;
+      if (b.height !== BH) b.height = BH;
+    };
+    this.onGlassResize = resize;
+    window.addEventListener('resize', this.onGlassResize);
+    resize();
+
+    const sec = root.querySelector('#top') || c.parentElement;
+    const L = this.lens = this.lens || {x: 0, y: 0, tx: 0, ty: 0, a: 0, ta: 0, has: false};
+    const onMove = e => {
+      const r = c.getBoundingClientRect();
+      L.tx = e.clientX - r.left;
+      L.ty = e.clientY - r.top;
+      L.ta = 1;
+      if (!L.has) { L.x = L.tx; L.y = L.ty; L.has = true; }
+    };
+    if (!sec.dataset.lensBound) {
+      sec.dataset.lensBound = '1';
+      sec.addEventListener('pointermove', onMove, {passive: true});
+      sec.addEventListener('pointerdown', onMove, {passive: true});
+      sec.addEventListener('pointerleave', () => { L.ta = 0; });
+    }
+
+    const frame = () => {
+      const pp = window.__cimacPP;
+      if (pp && pp.buffered && pp.frames.length) {
+        const fi = Math.max(0, Math.min(pp.frames.length - 1, Math.round(pp.idx)));
+        return pp.frames[fi];
+      }
+      return v.videoWidth ? v : null;
+    };
+
+    // cover-fit, so the frame fills the box at any aspect ratio
+    const cover = (g, src, w, h) => {
+      const sw = src.videoWidth || src.width, sh = src.videoHeight || src.height;
+      if (!sw || !sh) return;
+      const s = Math.max(w / sw, h / sh);
+      g.drawImage(src, (w - sw * s) / 2, (h - sh * s) / 2, sw * s, sh * s);
+    };
+
+    const draw = () => {
+      if (ggen !== window.__cimacGlassGen) return; // superseded by a newer loop
+      this.glassRaf = window.__cimacGlassRaf = requestAnimationFrame(draw);
+      const src = frame();
+      if (!src || !W || !H) return;
+      cover(bctx, src, BW, BH);
+      // the disc is drawn 1:1 from the video element, never from the buffer
+      const sharp = v.videoWidth ? v : src;
+      L.x += (L.tx - L.x) * 0.16;
+      L.y += (L.ty - L.y) * 0.16;
+      L.a += (L.ta - L.a) * 0.09;
+      if (L.a < 0.012) { if (c.style.opacity !== '0') c.style.opacity = '0'; return; }
+      c.style.opacity = L.a.toFixed(3);
+      const dpr = this.lensDpr || 1;
+      const rad = Math.max(170, Math.min(W, H) * 0.32);
+      ctx.clearRect(0, 0, W, H);
+      ctx.save();
+      cover(ctx, sharp, W, H);
+      // punch the sharp layer down to a soft disc under the cursor
+      ctx.globalCompositeOperation = 'destination-in';
+      const g = ctx.createRadialGradient(L.x * dpr, L.y * dpr, 0, L.x * dpr, L.y * dpr, rad);
+      g.addColorStop(0, 'rgba(0,0,0,1)');
+      g.addColorStop(0.5, 'rgba(0,0,0,.94)');
+      g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, W, H);
+      ctx.restore();
+    };
+    this.glassRaf = window.__cimacGlassRaf = requestAnimationFrame(draw);
+  }
+
+  // Narrow and touch layouts never fire hover, so the "explorar" CTAs that
+  // desktop reveals on hover have to be shown up front instead.
+  ctaAlwaysOn() {
+    return window.innerWidth < 1000 ||
+      !(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+  }
+
+  syncTouchCTAs() {
+    const root = this.root.current;
+    if (!root) return;
+    const on = this.ctaAlwaysOn();
+    root.querySelectorAll('[data-lineexplore],[data-projexplore]').forEach(e => {
+      e.style.opacity = on ? '1' : '0';
+      e.style.transform = on ? 'translateY(0)' : 'translateY(8px)';
+    });
+  }
+
+  setupHovers() {
+    const root = this.root.current;
+    if (!root) return;
+    const bind = (el, paint) => {
+      if (el.dataset.hoverBound) return;
+      el.dataset.hoverBound = '1';
+      el.addEventListener('mouseenter', () => paint(true));
+      el.addEventListener('mouseleave', () => paint(false));
+      el.addEventListener('focus', () => paint(true));
+      el.addEventListener('blur', () => paint(false));
+    };
+
+    root.querySelectorAll('[data-linecard]').forEach(card => {
+      const accent = card.dataset.accent || '#fc4425';
+      const glow = card.querySelector('[data-lineglow]');
+      const rule = card.querySelector('[data-linerule]');
+      const num = card.querySelector('[data-linenum]');
+      const tag = card.querySelector('[data-linetag]');
+      const exp = card.querySelector('[data-lineexplore]');
+      const fill = card.querySelector('[data-linerule-fill]');
+      const bar = card.querySelector('[data-linebar]');
+      if (fill) fill.style.background = accent;
+      if (bar) bar.style.background = accent;
+      bind(card, on => {
+        if (glow) glow.style.opacity = on ? '1' : '0';
+        if (fill) fill.style.width = on ? '100%' : '0%';
+        if (bar) bar.style.transform = on ? 'scaleY(1)' : 'scaleY(0)';
+        if (num) num.style.color = on ? accent : 'rgba(255,255,255,.07)';
+        if (tag) {
+          tag.style.color = on ? '#ffffff' : 'rgba(255,255,255,.4)';
+          tag.style.borderColor = on ? accent : 'rgba(255,255,255,.22)';
+        }
+        if (exp) {
+          const keep = on || this.ctaAlwaysOn();
+          exp.style.opacity = keep ? '1' : '0';
+          exp.style.transform = keep ? 'translateY(0)' : 'translateY(8px)';
+        }
+      });
+    });
+
+    root.querySelectorAll('[data-teamcard]').forEach(card => {
+      const bar = card.querySelector('[data-teambar]');
+      const glow = card.querySelector('[data-teamglow]');
+      const fill = card.querySelector('[data-teamrule-fill]');
+      const name = card.querySelector('[data-teamname]');
+      const photo = card.querySelector('img');
+      bind(card, on => {
+        if (bar) bar.style.transform = on ? 'scaleY(1)' : 'scaleY(0)';
+        if (glow) glow.style.opacity = on ? '1' : '0';
+        if (fill) fill.style.width = on ? '100%' : '0%';
+        if (name) name.style.color = on ? '#a08fc4' : '#ffffff';
+        if (photo) {
+          photo.style.filter = on ? 'grayscale(0) contrast(1.02)' : 'grayscale(1) contrast(1.05)';
+          photo.style.transform = on ? 'scale(1.04)' : 'scale(1)';
+        }
+      });
+    });
+
+    root.querySelectorAll('[data-projcard]').forEach(card => {
+      const zoom = card.querySelector('[data-projzoom]');
+      const title = card.querySelector('[data-projtitle]');
+      const bar = card.querySelector('[data-projbar]');
+      const fill = card.querySelector('[data-projrule-fill]');
+      const exp = card.querySelector('[data-projexplore]');
+      bind(card, on => {
+        if (zoom) zoom.style.transform = on ? 'scale(1.05)' : 'scale(1)';
+        if (title) {
+          if (!title.dataset.baseColor) title.dataset.baseColor = getComputedStyle(title).color;
+          title.style.color = on ? '#fc4425' : title.dataset.baseColor;
+        }
+        if (bar) bar.style.transform = on ? 'scaleY(1)' : 'scaleY(0)';
+        if (fill) fill.style.width = on ? '100%' : '0%';
+        if (exp) {
+          const keep = on || this.ctaAlwaysOn();
+          exp.style.opacity = keep ? '1' : '0';
+          exp.style.transform = keep ? 'translateY(0)' : 'translateY(8px)';
+        }
+      });
+    });
+
+    root.querySelectorAll('[data-tile]').forEach(tile => {
+      const bar = tile.querySelector('[data-tilebar]');
+      const fill = tile.querySelector('[data-tilerule-fill]');
+      bind(tile, on => {
+        if (bar) bar.style.transform = on ? 'scaleY(1)' : 'scaleY(0)';
+        if (fill) fill.style.width = on ? '100%' : '0%';
+      });
+    });
+
+    root.querySelectorAll('[data-newscard]').forEach(card => {
+      const zoom = card.querySelector('[data-nzoom]');
+      const num = card.querySelector('[data-nnum]');
+      const rule = card.querySelector('[data-nrule]');
+      const arrow = card.querySelector('[data-narrow]');
+      const title = card.querySelector('[data-ntitle]');
+      const bar = card.querySelector('[data-nbar]');
+      const fill = card.querySelector('[data-nrule-fill]');
+      bind(card, on => {
+        if (zoom) zoom.style.transform = on ? 'scale(1.06)' : 'scale(1)';
+
+        if (bar) bar.style.transform = on ? 'scaleY(1)' : 'scaleY(0)';
+        if (fill) fill.style.width = on ? '100%' : '0%';
+        if (arrow) {
+          arrow.style.opacity = on ? '1' : '0';
+          arrow.style.transform = on ? 'translateY(0)' : 'translateY(10px)';
+        }
+        if (title) title.style.color = on ? '#fc4425' : '#1e1728';
+      });
+    });
+
+    root.querySelectorAll('[data-eventcard]').forEach(card => {
+      const bar = card.querySelector('[data-evbar]');
+      const title = card.querySelector('[data-evtitle]');
+      bind(card, on => {
+        if (bar) bar.style.transform = on ? 'scaleY(1)' : 'scaleY(0)';
+        if (title) title.style.color = on ? '#fc4425' : '#1e1728';
+      });
+    });
+    root.querySelectorAll('[data-overlay]').forEach(ov => {
+      const card = ov.closest('a');
+      const ph = card ? card.querySelector('[data-parallax]') : null;
+      if (!card || card.dataset.hoverBound) return;
+      card.dataset.hoverBound = '1';
+      card.addEventListener('mouseenter', () => {
+        ov.style.opacity = '1';
+        if (ph) ph.style.scale = '1.06';
+      });
+      card.addEventListener('mouseleave', () => {
+        ov.style.opacity = '0';
+        if (ph) ph.style.scale = '1';
+      });
+    });
+  }
+
+  // Odometer digit roll: each digit becomes a 0-9 strip that slides to its value.
+  buildFlow(el) {
+    const digits = String(parseInt(el.dataset.count, 10) || 0).split('');
+    el.textContent = '';
+    el.style.display = 'inline-flex';
+    el.style.alignItems = 'flex-start';
+    const cols = [];
+    digits.forEach((d, i) => {
+      const col = document.createElement('span');
+      col.style.cssText = 'display:block;overflow:hidden;height:1em;line-height:1';
+      const strip = document.createElement('span');
+      strip.setAttribute('data-flow-strip', '');
+      strip.style.cssText = 'display:block;transform:translateY(0);transition:transform 1.1s cubic-bezier(.22,1,.28,1);transition-delay:' + (i * 90 + 60) + 'ms';
+      for (let n = 0; n <= 9; n++) {
+        const cell = document.createElement('span');
+        cell.style.cssText = 'display:block;height:1em;line-height:1;font-variant-numeric:tabular-nums';
+        cell.textContent = String(n);
+        strip.appendChild(cell);
+      }
+      col.appendChild(strip);
+      el.appendChild(col);
+      cols.push({ strip: strip, value: +d });
+    });
+    return cols;
+  }
+
+  rollNumber(block, animate) {
+    const el = block.querySelector('[data-count]');
+    if (!el) return;
+    if (!el.querySelector('[data-flow-strip]')) el.__cols = this.buildFlow(el);
+    const cols = el.__cols || [];
+    cols.forEach(c => {
+      if (!animate) c.strip.style.transition = 'none';
+      c.strip.style.transform = 'translateY(-' + c.value + 'em)';
+    });
+  }
+
+  setupCounters() {
+    const root = this.root.current;
+    if (!root) return;
+    root.querySelectorAll('[data-stat]').forEach(b => {
+      const shown = b.dataset.done === '1';
+      // stagger within each group, not across the whole page, so late sections
+      // never inherit a long delay
+      const sibs = b.parentElement ? [...b.parentElement.children].filter(n => n.hasAttribute('data-stat')) : [b];
+      const i = Math.max(0, sibs.indexOf(b));
+      b.style.transition = 'opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)';
+      b.style.transitionDelay = Math.min(i * 80, 320) + 'ms';
+      b.style.opacity = shown ? '1' : '0';
+      b.style.transform = shown ? 'translateY(0)' : 'translateY(30px)';
+      if (shown) this.rollNumber(b, false);
+      else {
+        const el = b.querySelector('[data-count]');
+        if (el && !el.querySelector('[data-flow-strip]')) el.__cols = this.buildFlow(el);
+      }
+    });
+    this.revealStats();
+  }
+
+  revealStats() {
+    const root = this.root.current;
+    if (!root) return;
+    root.querySelectorAll('[data-stat]').forEach(b => {
+      if (b.dataset.done === '1') return;
+      const r = b.getBoundingClientRect();
+      if (r.bottom <= 0) { // scrolled past before it ever revealed — show it outright
+        b.dataset.done = '1';
+        b.style.opacity = '1';
+        b.style.transform = 'translateY(0)';
+        this.rollNumber(b, false);
+      } else if (r.top < window.innerHeight * 0.85) {
+        b.dataset.done = '1';
+        b.style.opacity = '1';
+        b.style.transform = 'translateY(0)';
+        this.rollNumber(b, true);
+      }
+    });
+  }
+}
+</script>
+</body>
+</html>
