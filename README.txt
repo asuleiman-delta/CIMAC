@@ -1,22 +1,38 @@
-CIMAC — home (build de producción)
-==================================
+CIMAC — Home / build de producción
+===================================
 
 Contenido
-  index.html   la home completa
-  support.js   runtime que la renderiza (debe quedar junto a index.html)
-  _ds/         hoja de estilos y bundle del sistema de diseño
-  assets/      video del hero, fotos, logos, fuentes, ícono de WhatsApp
+---------
+index.html                 Página completa (home)
+support.js                 Runtime que renderiza la página. Debe quedar junto a index.html.
+_ds/industry-.../          Hoja de estilos y bundle del design system Industry
+assets/fonts/              Euclid Flex (.ttf) y Campton (.otf)
+assets/team/               Fotos del equipo
+assets/hero-comp5.mp4      Video del hero
+assets/*.png               Logos (CIMAC, USACH, ANID, Ministerio, consorcio) y fondos
 
-Cómo publicarla
-  Sube el contenido de esta carpeta a la raíz del hosting, tal cual
-  (index.html arriba, y las carpetas assets/, _ds/ al mismo nivel).
-  Es un sitio estático: sirve en cualquier hosting o CDN, sin build.
+Cómo publicarlo
+---------------
+1. Subir TODO el contenido de esta carpeta al servidor, manteniendo la
+   estructura de carpetas tal cual (index.html en la raíz del sitio).
+2. Servir por HTTP/HTTPS. Abrir el archivo con doble clic (file://) no
+   funciona: el navegador bloquea la carga de los assets.
+3. No hay build ni dependencias de node. Es hosting estático
+   (Netlify, Vercel, S3, Apache, Nginx, cPanel, etc.).
+
+Dependencia externa
+-------------------
+El scroll suave usa Lenis desde CDN:
+https://unpkg.com/lenis@1.1.18/dist/lenis.min.js
+Si el sitio debe funcionar sin acceso a internet externo, descargar ese
+archivo, guardarlo en assets/ y cambiar el <script src> en index.html.
 
 Notas
-  · Debe servirse por http/https, no abriendo el archivo con doble clic.
-  · React se carga desde unpkg.com; si necesitas que funcione sin internet,
-    hay que vendorizar esas dos librerías.
-  · El video del hero pesa la mayor parte del build: si el sitio queda
-    lento en móvil, comprímelo o cámbialo por uno más corto.
-  · Pendientes de contenido: el número de WhatsApp (wa.me/56200000000) y
-    los correos/enlaces del formulario y footer son de ejemplo.
+-----
+- El video del hero está silenciado y en autoplay; así lo exigen los
+  navegadores para reproducir sin interacción del usuario. No quitar el
+  atributo muted.
+- Los enlaces de WhatsApp, correo y redes sociales son placeholders:
+  revisar y reemplazar por los datos reales antes de publicar.
+- Las fuentes Euclid Flex y Campton son de licencia comercial.
+  Confirmar que la licencia cubre el uso web antes de publicar.
