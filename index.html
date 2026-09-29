@@ -1,15 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CIMAC — Centro de Innovación en Tecnología de Materiales</title>
-<meta name="description" content="Centro de Innovación en Tecnología de Materiales de la Universidad de Santiago de Chile. Investigación, transferencia tecnológica y servicios para el entorno construido.">
-<meta name="theme-color" content="#1e1728">
-<link rel="icon" href="assets/cimac-badge-white.png">
-<meta property="og:title" content="CIMAC — Centro de Innovación en Tecnología de Materiales">
-<meta property="og:description" content="Investigación, transferencia tecnológica y servicios para el entorno construido.">
-<meta property="og:type" content="website">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -47,7 +40,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
   <header data-header="" style="position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s ease,box-shadow .35s ease,border-color .35s ease;border-bottom:1px solid transparent">
     <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(20px,5vw,80px)">
       <a href="#top" style="display:block;flex:0 0 auto">
-        <img data-logo="" src="assets/cimac-wordmark-white.png" alt="CIMAC" style="height:clamp(26px,2.4vw,34px);width:auto;display:block">
+        <img data-logo="" src="assets/cimac-logo-slogan-white.png" alt="CIMAC · Centro de Innovación en Tecnología de Materiales" style="height:clamp(40px,3.6vw,52px);width:auto;display:block">
       </a>
       <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
         <nav style="display:flex;align-items:center;gap:clamp(14px,1.9vw,32px)">
@@ -72,7 +65,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
   <sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}">
     <div style="position:fixed;inset:0;z-index:70;background:#16111f;display:flex;flex-direction:column;padding:clamp(20px,5vw,80px);animation:linkIn .4s both">
       <div style="display:flex;align-items:center;justify-content:space-between">
-        <img src="assets/cimac-wordmark-white.png" alt="CIMAC" style="height:30px;width:auto">
+        <img src="assets/cimac-logo-slogan-white.png" alt="CIMAC" style="height:44px;width:auto">
         <button onClick="{{ toggleMenu }}" aria-label="Cerrar" style="width:46px;height:34px;border:1px solid rgba(255,255,255,.28);background:transparent;border-radius:999px;color:#ffffff;font-size:20px;cursor:pointer;font-family:'Campton'">×</button>
       </div>
       <nav style="margin-top:auto;margin-bottom:auto;display:flex;flex-direction:column;gap:clamp(6px,1.4vh,14px)">
@@ -97,15 +90,77 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
     <video data-hero-video="" src="assets/hero-comp5.mp4" autoplay="" muted="" playsinline="" preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;opacity:0"></video>
     <canvas data-hero-blur="" aria-hidden="true" style="position:absolute;inset:-7%;width:114%;height:114%;display:block;pointer-events:none;filter:blur(30px) saturate(118%) brightness(96%)"></canvas>
     <canvas data-hero-lens="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;opacity:0"></canvas>
-    <div style="position:relative;width:100%;max-width:1240px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center">
-      <p style="margin:0 0 clamp(20px,3vw,34px);font-family:'Campton';font-weight:600;font-size:clamp(10px,.85vw,12px);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62);animation:rise .9s cubic-bezier(.16,1,.3,1) both">Centro de Innovación en Tecnología de Materiales · USACH</p>
-      <h1 style="margin:0;max-width:100%;font-family:'Euclid Flex';font-weight:700;font-size:clamp(38px,6.4vw,88px);line-height:.98;letter-spacing:-.03em;text-wrap:pretty;animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.08s">Innovación en materiales<br>para el <span style="color: var(--color-bg);">entorno construido</span></h1>
-      <p style="margin:clamp(22px,3vw,34px) 0 0;max-width:52ch;font-family:'Campton';font-size:clamp(16px,1.25vw,20px);line-height:1.6;color:rgba(255,255,255,.74);animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.16s">Transformamos residuos y compuestos biobasados en soluciones reales para la industria de la construcción.</p>
-      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:clamp(28px,4vw,44px);animation:riseT 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.24s">
-        <a href="#contacto" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-3px)">Solicita una asesoría
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .35s cubic-bezier(.16,1,.3,1)"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+    <div onMouseEnter="{{ heroPause }}" onMouseLeave="{{ heroResume }}" style="position:relative;width:100%;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));align-items:center;gap:clamp(32px,5vw,80px);animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.08s">
+      <div style="position:relative;width:100%;max-width:540px;aspect-ratio:1/1;justify-self:center;border-radius:22px;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 80px rgba(10,6,18,.45)">
+        <div style="position:absolute;inset:0;opacity:{{ hs.s0.op }};transform:scale({{ hs.s0.sc }});transition:opacity .9s ease,transform 1.4s cubic-bezier(.16,1,.3,1);pointer-events:{{ hs.s0.pe }}">
+          <img src="assets/hero-slide-1.png" alt="Vista de Santiago y la cordillera" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div style="position:absolute;inset:0;opacity:{{ hs.s1.op }};transform:scale({{ hs.s1.sc }});transition:opacity .9s ease,transform 1.4s cubic-bezier(.16,1,.3,1);pointer-events:{{ hs.s1.pe }}">
+          <img src="assets/hero-slide-2.png" alt="Equipo en obra" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div style="position:absolute;inset:0;opacity:{{ hs.s2.op }};transform:scale({{ hs.s2.sc }});transition:opacity .9s ease,transform 1.4s cubic-bezier(.16,1,.3,1);pointer-events:{{ hs.s2.pe }}">
+          <img src="assets/hero-slide-3.png?v=2" alt="Vista panorámica de ciudad" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div aria-hidden="true" style="position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:22px;backdrop-filter:blur(34px);-webkit-backdrop-filter:blur(34px);-webkit-mask-image:radial-gradient(ellipse 68% 68% at 50% 50%,transparent 42%,#000 88%);mask-image:radial-gradient(ellipse 68% 68% at 50% 50%,transparent 42%,#000 88%)"></div>
+        <span style="position:absolute;top:16px;right:16px;z-index:2;font-family:'Campton';font-weight:600;font-size:12px;letter-spacing:.14em;color:#ffffff;background:rgba(30,23,40,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:7px 12px;border-radius:999px;pointer-events:none">{{ hs.label }}</span>
+      </div>
+      <div style="min-width:0;display:flex;flex-direction:column">
+        <div style="display:grid">
+        <div aria-hidden="{{ hs.s0.hid }}" style="grid-area:1/1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;opacity:{{ hs.s0.op }};transform:translateY({{ hs.s0.ty }});transition:opacity .7s ease,transform .9s cubic-bezier(.16,1,.3,1);pointer-events:{{ hs.s0.pe }}">
+          <p style="margin:0 0 clamp(18px,2.4vw,28px);font-family:'Campton';font-weight:600;font-size:clamp(10px,.85vw,12px);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62)">Centro de Innovación · CTI250005</p>
+          <h1 style="margin:0;max-width:100%;font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,3.6vw,56px);line-height:1.04;letter-spacing:-.03em;text-wrap:balance">Centro de Innovación en Tecnología y Diseño de Materiales para el Entorno Construido</h1>
+          <p style="margin:clamp(18px,2.4vw,28px) 0 0;max-width:46ch;font-family:'Campton';font-size:clamp(16px,1.2vw,19px);line-height:1.6;color:rgba(255,255,255,.74);text-wrap:pretty">Diseño, Tecnología e Innovación en Materiales y Soluciones para el Entorno Construido</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(26px,3.4vw,40px)">
+        <a href="#contacto" tabindex="{{ hs.s0.tab }}" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px)">Solicita una asesoría
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
         </a>
-        <a href="#nosotros" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);backdrop-filter:blur(34px);-webkit-backdrop-filter:blur(34px);color:#ffffff;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s ease,background .3s ease" style-hover="transform:translateY(-3px)">Conócenos</a>
+        <a href="#nosotros" tabindex="{{ hs.s0.tab }}" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);backdrop-filter:blur(34px);-webkit-backdrop-filter:blur(34px);color:#ffffff;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-3px);background:rgba(255,255,255,.16)">Conócenos</a>
+          </div>
+        </div>
+        <div aria-hidden="{{ hs.s1.hid }}" style="grid-area:1/1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;opacity:{{ hs.s1.op }};transform:translateY({{ hs.s1.ty }});transition:opacity .7s ease,transform .9s cubic-bezier(.16,1,.3,1);pointer-events:{{ hs.s1.pe }}">
+          <p style="margin:0 0 clamp(18px,2.4vw,28px);font-family:'Campton';font-weight:600;font-size:clamp(10px,.85vw,12px);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62)">EDIFICA 2026</p>
+          <h2 style="margin:0;max-width:100%;font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,3.6vw,56px);line-height:1.04;letter-spacing:-.03em;text-wrap:balance">Los líderes que construyen la industria de la construcción se reunirán en Edifica 2026.</h2>
+          <p style="margin:clamp(18px,2.4vw,28px) 0 0;max-width:46ch;font-family:'Campton';font-size:clamp(16px,1.2vw,19px);line-height:1.6;color:rgba(255,255,255,.74);text-wrap:pretty">Centro CIMAC estará presente impulsando la innovación en materiales y economía circular.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(26px,3.4vw,40px)">
+        <a href="#actualidad" tabindex="{{ hs.s1.tab }}" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px)">Ver agenda
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+        </a>
+        <a href="#contacto" tabindex="{{ hs.s1.tab }}" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);backdrop-filter:blur(34px);-webkit-backdrop-filter:blur(34px);color:#ffffff;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-3px);background:rgba(255,255,255,.16)">Participa</a>
+          </div>
+        </div>
+        <div aria-hidden="{{ hs.s2.hid }}" style="grid-area:1/1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;opacity:{{ hs.s2.op }};transform:translateY({{ hs.s2.ty }});transition:opacity .7s ease,transform .9s cubic-bezier(.16,1,.3,1);pointer-events:{{ hs.s2.pe }}">
+          <p style="margin:0 0 clamp(18px,2.4vw,28px);font-family:'Campton';font-weight:600;font-size:clamp(10px,.85vw,12px);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62)">CIMAC</p>
+          <h2 style="margin:0;max-width:100%;font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,3.6vw,56px);line-height:1.04;letter-spacing:-.03em;text-wrap:balance">Materiales y Soluciones para construir una ciudad circular.</h2>
+          <p style="margin:clamp(18px,2.4vw,28px) 0 0;max-width:46ch;font-family:'Campton';font-size:clamp(16px,1.2vw,19px);line-height:1.6;color:rgba(255,255,255,.74);text-wrap:pretty">Centro de Innovación en Tecnología y Diseño de Materiales para el Entorno Construido</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(26px,3.4vw,40px)">
+        <a href="#proyectos" tabindex="{{ hs.s2.tab }}" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px)">Ver proyectos
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+        </a>
+        <a href="#contacto" tabindex="{{ hs.s2.tab }}" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);backdrop-filter:blur(34px);-webkit-backdrop-filter:blur(34px);color:#ffffff;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-3px);background:rgba(255,255,255,.16)">Solicita una asesoría</a>
+          </div>
+        </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;margin-top:clamp(32px,4vw,52px);max-width:460px">
+          <button onClick="{{ heroPrev }}" aria-label="Anterior" style="width:46px;height:46px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);border-radius:999px;color:#ffffff;cursor:pointer;transition:background .3s ease,border-color .3s ease" style-hover="background:rgba(255,255,255,.16);border-color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></button>
+          <div style="flex:1 1 auto;display:flex;gap:8px">
+          <button onClick="{{ hs.s0.go }}" aria-label="Ir a la diapositiva 1" style="position:relative;flex:1 1 0;height:28px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center">
+            <span style="position:relative;display:block;width:100%;height:2px;background:rgba(255,255,255,.22);overflow:hidden;border-radius:2px">
+              <span data-hero-bar="0" style="position:absolute;inset:0;background:#ffffff;transform-origin:left;transform:scaleX(0)"></span>
+            </span>
+          </button>
+          <button onClick="{{ hs.s1.go }}" aria-label="Ir a la diapositiva 2" style="position:relative;flex:1 1 0;height:28px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center">
+            <span style="position:relative;display:block;width:100%;height:2px;background:rgba(255,255,255,.22);overflow:hidden;border-radius:2px">
+              <span data-hero-bar="1" style="position:absolute;inset:0;background:#ffffff;transform-origin:left;transform:scaleX(0)"></span>
+            </span>
+          </button>
+          <button onClick="{{ hs.s2.go }}" aria-label="Ir a la diapositiva 3" style="position:relative;flex:1 1 0;height:28px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center">
+            <span style="position:relative;display:block;width:100%;height:2px;background:rgba(255,255,255,.22);overflow:hidden;border-radius:2px">
+              <span data-hero-bar="2" style="position:absolute;inset:0;background:#ffffff;transform-origin:left;transform:scaleX(0)"></span>
+            </span>
+          </button>
+          </div>
+          <button onClick="{{ heroNext }}" aria-label="Siguiente" style="width:46px;height:46px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);border-radius:999px;color:#ffffff;cursor:pointer;transition:background .3s ease,border-color .3s ease" style-hover="background:rgba(255,255,255,.16);border-color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
       </div>
     </div>
   </section>
@@ -115,15 +170,11 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
     <span style="flex:1 1 auto;min-width:0;overflow:hidden;display:block">
     <div style="display:flex;width:max-content;animation:marquee 34s linear infinite">
       <div style="display:flex;align-items:center;gap:clamp(28px,4vw,56px);padding-right:clamp(28px,4vw,56px)">
-        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.14em;text-transform:uppercase;color:#ffffff;white-space:nowrap">Convocatoria abierta</span>
-        <span style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7);flex:0 0 auto"></span>
-        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.14em;text-transform:uppercase;color:#ffffff;white-space:nowrap;font-weight:500;letter-spacing:.06em;text-transform:none">Fondo de Innovación Industrial 2026 — postulaciones hasta el 30 de octubre</span>
+        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.06em;color:#ffffff;white-space:nowrap">Participa por entradas para EDIFICA 2026 | 20, 21 y 22 de octubre</span>
         <span style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7);flex:0 0 auto"></span>
       </div>
       <div aria-hidden="true" style="display:flex;align-items:center;gap:clamp(28px,4vw,56px);padding-right:clamp(28px,4vw,56px)">
-        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.14em;text-transform:uppercase;color:#ffffff;white-space:nowrap">Convocatoria abierta</span>
-        <span style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7);flex:0 0 auto"></span>
-        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.14em;text-transform:uppercase;color:#ffffff;white-space:nowrap;font-weight:500;letter-spacing:.06em;text-transform:none">Fondo de Innovación Industrial 2026 — postulaciones hasta el 30 de octubre</span>
+        <span style="font-family:'Campton';font-weight:600;font-size:clamp(13px,1.05vw,16px);letter-spacing:.06em;color:#ffffff;white-space:nowrap">Participa por entradas para EDIFICA 2026 | 20, 21 y 22 de octubre</span>
         <span style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.7);flex:0 0 auto"></span>
       </div>
     </div>
@@ -153,7 +204,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
               <span data-linerule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden"><span data-linerule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
               <h3 style="margin:clamp(20px,2vw,28px) 0 0;font-family:'Euclid Flex';font-weight:600;font-size:clamp(23px,2.1vw,32px);line-height:1.08;letter-spacing:-.02em;text-wrap:pretty">Materias Primas Secundarias (MPS)</h3>
               <p style="margin:14px 0 0;font-family:'Campton';font-size:15px;line-height:1.55;color:rgba(255,255,255,.58)">a partir de la Ley REP</p>
-              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Hugo Pérez – Líder L1</p>
+              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Dr. Hugo Pérez – Líder L1</p>
               <span data-lineexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
               </span>
@@ -167,7 +218,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
             <span style="margin-top:auto;position:relative">
               <span data-linerule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden"><span data-linerule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
               <h3 style="margin:clamp(20px,2vw,28px) 0 0;font-family:'Euclid Flex';font-weight:600;font-size:clamp(23px,2.1vw,32px);line-height:1.08;letter-spacing:-.02em;text-wrap:pretty">Componentes Biobasados (CBB)</h3>
-              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Macarena Valenzuela – Líder L2</p>
+              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Dra. Macarena Valenzuela – Líder L2</p>
               <span data-lineexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
               </span>
@@ -181,7 +232,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
             <span style="margin-top:auto;position:relative">
               <span data-linerule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden"><span data-linerule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
               <h3 style="margin:clamp(20px,2vw,28px) 0 0;font-family:'Euclid Flex';font-weight:600;font-size:clamp(21px,1.9vw,28px);line-height:1.12;letter-spacing:-.02em;text-wrap:pretty">Logística circular y optimización de procesos industriales de reciclaje (LCPR)</h3>
-              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Iván Derpich – Líder L3</p>
+              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Dr. Iván Derpich – Líder L3</p>
               <span data-lineexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
               </span>
@@ -195,7 +246,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
             <span style="margin-top:auto;position:relative">
               <span data-linerule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden"><span data-linerule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
               <h3 style="margin:clamp(20px,2vw,28px) 0 0;font-family:'Euclid Flex';font-weight:600;font-size:clamp(21px,1.9vw,28px);line-height:1.12;letter-spacing:-.02em;text-wrap:pretty">Innovación tecnológica para el desarrollo de sistemas constructivos sostenibles (IDSS)</h3>
-              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Pavlo Santander – Líder L4</p>
+              <p style="margin:22px 0 0;font-family:'Campton';font-weight:500;font-size:14px;color:rgba(255,255,255,.75)">Dr. Pavlo Santander – Líder L4</p>
               <span data-lineexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Explorar
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
               </span>
@@ -231,7 +282,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
         <p style="margin:12px 0 0;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.62)">Líneas de I+D+i+tt</p>
       </div>
       <div data-stat="" style="border-left:2px solid #fc4425;padding-left:clamp(18px,2vw,28px)">
-        <p style="margin:0;font-family:'Campton';font-size:clamp(15px,1.15vw,18px);line-height:1.6;color:rgba(255,255,255,.82)">Financiamiento adjudicado a través de <strong style="font-weight:600;color:#ffffff">ANID</strong> como Centros Tecnológicos para la Innovación 2025</p>
+        <p style="margin:0;font-family:'Campton';font-size:clamp(15px,1.15vw,18px);line-height:1.6;color:rgba(255,255,255,.82)">Consorcio tecnológico que conecta investigación, innovación y empresas para desarrollar soluciones aplicadas al entorno construido.</p>
       </div>
     </div>
   </section>
@@ -304,14 +355,22 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
     </div>
     <a data-projcard="" data-casecard="" data-stat="" href="#proyectos" style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:0;margin-top:-1px;background:#16111f;border:1px solid #16111f;color:#ffffff;cursor:pointer;overflow:hidden">
       <span data-projbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
-      <span data-casephoto="" style="position:relative;display:block;overflow:hidden;margin:clamp(22px,2.4vw,38px);border:1px solid rgba(255,255,255,.13)">
-        <span data-projzoom="" style="position:absolute;inset:0;background-image:url('uploads/ben-maguire-FTYgqLeseI4-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+      <span style="display:flex;flex-direction:column;gap:14px;margin:clamp(22px,2.4vw,38px);min-width:0">
+        <span data-casephoto="" style="position:relative;display:block;flex:1 1 auto;min-height:260px;overflow:hidden;border:1px solid rgba(255,255,255,.13)">
+          <span data-projzoom="" style="position:absolute;inset:0;background-image:url('uploads/ben-maguire-FTYgqLeseI4-unsplash.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+        </span>
+        <span style="display:block;font-family:'Campton';font-size:13px;line-height:1.55;color:rgba(255,255,255,.55);text-wrap:pretty">La solución ha sido instalada en Desafío Ambiente, presentada en Casa FOA 2025 y utilizada como revestimiento acústico en salas del Campus USACH durante 2026.</span>
       </span>
       <span style="padding:clamp(28px,3.4vw,56px) clamp(28px,3.4vw,56px) clamp(28px,3.4vw,56px) clamp(10px,1.2vw,20px);display:flex;flex-direction:column;justify-content:center">
         <span style="align-self:flex-start;font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 12px">Caso de éxito</span>
         <span data-projrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(24px,2.6vw,36px)"><span data-projrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
-        <span data-projtitle="" style="display:block;margin-top:clamp(18px,1.8vw,26px);font-family:'Euclid Flex';font-weight:600;font-size:clamp(24px,2.6vw,38px);line-height:1.08;letter-spacing:-.02em;color:#ffffff;transition:color .35s ease;text-wrap:pretty">[Caso de éxito — empresa vinculada — resultado]</span>
-        <span style="display:block;margin-top:16px;max-width:52ch;font-family:'Campton';font-size:clamp(15px,1.15vw,17px);line-height:1.6;color:rgba(255,255,255,.66)">Resumen de una línea sobre el problema industrial abordado y el resultado transferido.</span>
+        <span data-projtitle="" style="display:block;margin-top:clamp(18px,1.8vw,26px);font-family:'Euclid Flex';font-weight:600;font-size:clamp(24px,2.6vw,38px);line-height:1.08;letter-spacing:-.02em;color:#ffffff;transition:color .35s ease;text-wrap:pretty">Resonador Acústico Reciclado</span>
+        <span style="display:block;margin-top:14px;max-width:52ch;font-family:'Campton';font-size:clamp(16px,1.25vw,19px);line-height:1.5;color:rgba(255,255,255,.82)">De plástico reciclado a solución acústica para el entorno construido.</span>
+        <span style="display:block;margin-top:10px;font-family:'Campton';font-weight:500;font-size:14px;letter-spacing:.02em;color:rgba(255,255,255,.5)">Proyecto FONDEF ID23I10389</span>
+        <span style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(20px,2.4vw,36px);margin-top:clamp(26px,2.8vw,40px)">
+          <span style="display:block;min-width:0"><span style="display:block;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fc4425">El desafío</span><span style="display:block;margin-top:10px;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.72);text-wrap:pretty">Desarrollar una solución de acondicionamiento acústico que incorporara criterios de circularidad y que pudiera adaptarse a diferentes aplicaciones en espacios construidos.</span></span>
+          <span style="display:block;min-width:0"><span style="display:block;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fc4425">La solución</span><span style="display:block;margin-top:10px;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.72);text-wrap:pretty">Un resonador acústico fabricado con plástico reciclado preconsumo, con posibilidad de incorporar distintos materiales absorbentes y utilizarse en cielos modulares, nubes acústicas y revestimientos de muro.</span></span>
+        </span>
         <span data-projexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Leer el caso
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
         </span>
@@ -331,7 +390,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
           <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
             <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
             <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
-            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/jose-antonio-carrasco.jpeg" alt="José Antonio Carrasco Villa" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/jose-antonio-carrasco.jpeg" alt="José Antonio Carrasco Villa" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">José Antonio Carrasco Villa</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Director Ejecutivo</p>
@@ -342,7 +401,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
           <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
             <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
             <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
-            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/alexandre-carbonnel.jpeg" alt="Alexandre Carbonnel Torralbo" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/alexandre-carbonnel.jpeg" alt="Alexandre Carbonnel Torralbo" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Alexandre Carbonnel Torralbo</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Director Científico</p>
@@ -353,7 +412,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
           <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
             <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
             <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
-            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/placeholder-1.jpeg" alt="Francisca Troncoso" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/placeholder-1.jpeg" alt="Francisca Troncoso" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Francisca Troncoso</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargada de Transferencia Tecnológica</p>
@@ -364,7 +423,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
           <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
             <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
             <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
-            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/leslie-diaz.jpeg" alt="Leslie Díaz" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/leslie-diaz.jpeg" alt="Leslie Díaz" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Leslie Díaz</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargada Técnica de Transferencia Tecnológica</p>
@@ -375,7 +434,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
           <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
             <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
             <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
-            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/placeholder-2.jpeg" alt="Ashley Gómez Ceballos" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/placeholder-2.jpeg" alt="Ashley Gómez Ceballos" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Ashley Gómez Ceballos</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargada de Comunicaciones</p>
@@ -386,7 +445,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
           <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
             <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
             <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
-            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/placeholder-3.jpeg" alt="Iván Toro" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;filter:grayscale(1) contrast(1.05);transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/placeholder-3.jpeg" alt="Iván Toro" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Iván Toro</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargado de Finanzas</p>
@@ -412,14 +471,16 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
   </section>
 
   <section style="background:#f6f5f9;padding:clamp(56px,7vw,104px) clamp(20px,5vw,80px)">
-    <p style="margin:0 0 clamp(26px,3vw,40px);font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8a8299">Consorcio · Instituciones colaboradoras</p>
-    <div data-stat="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:#e2ddec;border:1px solid #e2ddec">
-      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-usach.png" alt="USACH" loading="lazy" style="max-width:100%;height:76px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
-      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-utem.png" alt="UTEM" loading="lazy" style="max-width:100%;height:58px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
-      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-uai.png" alt="Universidad Adolfo Ibáñez" loading="lazy" style="max-width:100%;height:50px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
-      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-udec.png" alt="Universidad de Concepción" loading="lazy" style="max-width:100%;height:56px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
-      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-ctec.png" alt="CTEC" loading="lazy" style="max-width:100%;height:46px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
-      <div style="background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:clamp(22px,3vw,38px) 18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-labva.png" alt="LABVA" loading="lazy" style="max-width:100%;height:76px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+    <div data-stat="" data-instgrid="" style="display:grid;grid-template-columns:minmax(0,1fr) clamp(16px,2vw,32px) repeat(5,minmax(0,1fr));align-items:end">
+      <p data-instlabel="1" style="grid-column:1;margin:0 0 clamp(14px,1.6vw,22px);font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8a8299;text-wrap:balance">Institución beneficiaria</p>
+      <p data-instlabel="3 / -1" style="grid-column:3 / -1;margin:0 0 clamp(14px,1.6vw,22px);font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8a8299;white-space:nowrap">Instituciones Asociadas</p>
+      <div data-instcell="" style="height:clamp(120px,11vw,168px);box-sizing:border-box;border:1px solid #e2ddec;background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/usach-white.png" alt="USACH" loading="lazy" style="max-width:88%;height:auto;max-height:58px;width:auto;object-fit:contain;display:block;filter:brightness(0);opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <span data-instspacer="" aria-hidden="true"></span>
+      <div data-instcell="" style="height:clamp(120px,11vw,168px);box-sizing:border-box;border:1px solid #e2ddec;background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-utem.png" alt="UTEM" loading="lazy" style="max-width:100%;height:58px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <div data-instcell="" style="height:clamp(120px,11vw,168px);box-sizing:border-box;border:1px solid #e2ddec;margin-left:-1px;background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-uai.png" alt="Universidad Adolfo Ibáñez" loading="lazy" style="max-width:100%;height:50px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <div data-instcell="" style="height:clamp(120px,11vw,168px);box-sizing:border-box;border:1px solid #e2ddec;margin-left:-1px;background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-udec.png" alt="Universidad de Concepción" loading="lazy" style="max-width:100%;height:56px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <div data-instcell="" style="height:clamp(120px,11vw,168px);box-sizing:border-box;border:1px solid #e2ddec;margin-left:-1px;background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-ctec.png" alt="CTEC" loading="lazy" style="max-width:100%;height:46px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
+      <div data-instcell="" style="height:clamp(120px,11vw,168px);box-sizing:border-box;border:1px solid #e2ddec;margin-left:-1px;background:#f6f5f9;display:flex;align-items:center;justify-content:center;padding:18px;transition:background .3s ease" style-hover="background:#ffffff"><img src="assets/logo-labva.png" alt="LABVA" loading="lazy" style="max-width:100%;height:76px;width:auto;object-fit:contain;display:block;opacity:.72;transition:opacity .3s ease" style-hover="opacity:1"></div>
     </div>
   </section>
 
@@ -480,49 +541,38 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
         <p style="margin:0;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fc4425">Agenda · Próximos eventos</p>
         <a href="#actualidad" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(30,23,40,.22);color:#1e1728;font-family:'Campton';font-weight:600;font-size:14px;padding:14px 24px;border-radius:999px;transition:border-color .3s ease,background .3s ease,transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">Ver toda la agenda</a>
       </div>
-      <div data-stat="" data-cols="2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#e6e2ee;border:1px solid #e6e2ee">
+      <div data-stat="" data-cols="3" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#e6e2ee;border:1px solid #e6e2ee">
         <a data-eventcard="" href="#actualidad" style="position:relative;display:flex;gap:20px;align-items:flex-start;min-height:clamp(112px,10vw,140px);padding:clamp(18px,2vw,26px);background:#ffffff;color:#1e1728;overflow:hidden">
           <span data-evbar="" style="position:absolute;left:0;top:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out"></span>
-          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;width:52px">
-            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425">12</span>
-            <span style="font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.18em;margin-top:6px;color:#8a8299">SEP</span>
-          </span>
-          <span style="display:block;flex:1 1 auto;min-width:0">
-            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Seminario: áridos reciclados en hormigón estructural</span>
-            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">09:00 h · Usach, Santiago · Presencial</span>
-          </span>
-        </a>
-        <a data-eventcard="" href="#actualidad" style="position:relative;display:flex;gap:20px;align-items:flex-start;min-height:clamp(112px,10vw,140px);padding:clamp(18px,2vw,26px);background:#ffffff;color:#1e1728;overflow:hidden">
-          <span data-evbar="" style="position:absolute;left:0;top:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out"></span>
-          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;width:52px">
-            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425">01</span>
+          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;min-width:52px">
+            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425;white-space:nowrap">01</span>
             <span style="font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.18em;margin-top:6px;color:#8a8299">OCT</span>
           </span>
           <span style="display:block;flex:1 1 auto;min-width:0">
-            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Taller de vinculación con proveedores de la Ley REP</span>
-            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">15:00 h · Online · Cupos limitados</span>
+            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Productos y Soluciones para Construcción Sostenible</span>
+            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">Green Building Council · Jueves 1 de octubre</span>
           </span>
         </a>
         <a data-eventcard="" href="#actualidad" style="position:relative;display:flex;gap:20px;align-items:flex-start;min-height:clamp(112px,10vw,140px);padding:clamp(18px,2vw,26px);background:#ffffff;color:#1e1728;overflow:hidden">
           <span data-evbar="" style="position:absolute;left:0;top:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out"></span>
-          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;width:52px">
-            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425">23</span>
+          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;min-width:52px">
+            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425;white-space:nowrap">05–11</span>
             <span style="font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.18em;margin-top:6px;color:#8a8299">OCT</span>
           </span>
           <span style="display:block;flex:1 1 auto;min-width:0">
-            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Jornada de resultados: componentes biobasados</span>
-            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">10:30 h · Centro CIMAC · Híbrido</span>
+            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Festival de Ciencia y Tecnología</span>
+            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">5 al 11 de octubre</span>
           </span>
         </a>
         <a data-eventcard="" href="#actualidad" style="position:relative;display:flex;gap:20px;align-items:flex-start;min-height:clamp(112px,10vw,140px);padding:clamp(18px,2vw,26px);background:#ffffff;color:#1e1728;overflow:hidden">
           <span data-evbar="" style="position:absolute;left:0;top:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out"></span>
-          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;width:52px">
-            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425">14</span>
-            <span style="font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.18em;margin-top:6px;color:#8a8299">NOV</span>
+          <span style="flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-start;min-width:52px">
+            <span style="font-family:'Euclid Flex';font-weight:700;font-size:30px;line-height:1;letter-spacing:-.03em;color:#fc4425;white-space:nowrap">20–23</span>
+            <span style="font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.18em;margin-top:6px;color:#8a8299">OCT</span>
           </span>
           <span style="display:block;flex:1 1 auto;min-width:0">
-            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">Encuentro industria–academia: construcción circular</span>
-            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">08:30 h · Estación Central · Presencial</span>
+            <span data-evtitle="" style="display:block;font-family:'Euclid Flex';font-weight:600;font-size:clamp(16px,1.3vw,19px);line-height:1.22;letter-spacing:-.01em;transition:color .35s ease;text-wrap:pretty">EDIFICA</span>
+            <span style="display:block;margin-top:8px;font-family:'Campton';font-size:13px;line-height:1.5;color:#8a8299">20 al 23 de octubre</span>
           </span>
         </a>
       </div>
@@ -692,17 +742,14 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
         </form>
       </div>
       <div style="position:relative;display:flex;flex-wrap:wrap;gap:clamp(28px,3.4vw,56px);padding:clamp(32px,4vw,64px) clamp(22px,3vw,56px)">
-        <div style="flex:1 1 300px;min-width:0;max-width:420px">
-          <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap">
-            <img src="assets/cimac-wordmark-white.png" alt="CIMAC" style="width:auto;height:36px;display:block;filter:brightness(.782)">
-            <span style="width:1px;height:34px;background:rgba(255,255,255,.16);display:block"></span>
-            <img src="assets/usach-white.png" alt="Universidad de Santiago de Chile" style="width:auto;height:30px;display:block;opacity:.85">
+        <div style="flex:1 1 320px;min-width:0;max-width:460px">
+          <div style="display:flex;align-items:center;gap:clamp(12px,1.6vw,22px);flex-wrap:nowrap;min-width:0">
+            <img src="assets/usach-white.png" alt="Universidad de Santiago de Chile" style="flex:0 1 auto;min-width:0;width:auto;height:auto;max-height:52px;max-width:48%;display:block;opacity:.85">
+            <span style="flex:0 0 1px;width:1px;height:44px;background:rgba(255,255,255,.16);display:block"></span>
+            <img src="assets/anid-white.png" alt="ANID · Agencia Nacional de Investigación y Desarrollo" style="flex:0 1 auto;min-width:0;width:auto;height:auto;max-height:68px;max-width:26%;display:block;opacity:.8">
+            <img src="assets/ministerio-white.png" alt="Ministerio de Ciencia, Tecnología, Conocimiento e Innovación · Gobierno de Chile" style="flex:0 1 auto;min-width:0;width:auto;height:auto;max-height:68px;max-width:26%;display:block;opacity:.8">
           </div>
-          <p style="margin:22px 0 0;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.6);max-width:38ch">Centro de Innovación en Tecnología de Materiales de la Universidad de Santiago de Chile. Investigación, transferencia tecnológica y servicios para el entorno construido.</p>
-          <div style="margin-top:30px;display:flex;align-items:center;gap:clamp(18px,2vw,28px);flex-wrap:wrap">
-            <img src="assets/anid-white.png" alt="ANID · Agencia Nacional de Investigación y Desarrollo" style="width:auto;height:clamp(72px,7vw,96px);max-width:100%;display:block;opacity:.8">
-            <img src="assets/ministerio-white.png" alt="Ministerio de Ciencia, Tecnología, Conocimiento e Innovación · Gobierno de Chile" style="width:auto;height:clamp(72px,7vw,96px);max-width:100%;display:block;opacity:.8">
-          </div>
+          <p style="margin:26px 0 0;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.6);max-width:38ch">Centro de Innovación en Tecnología y Diseño de Materiales para el Entorno Construido.</p>
         </div>
         <div style="flex:1 1 170px;min-width:0">
           <p style="margin:0 0 22px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Áreas</p>
@@ -727,14 +774,12 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
         <div style="flex:1 1 190px;min-width:0">
           <p style="margin:0 0 22px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Conecta</p>
           <div style="display:flex;flex-direction:column;gap:14px">
-            <a href="#top" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>Instagram</a>
-            <a href="#top" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7.5 10.5V17M7.5 7.2v.1M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"></path></svg>LinkedIn</a>
-            <a href="mailto:contacto@cimac.cl" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 6.5 8.5 6 8.5-6"></path></svg>Email</a>
-            <a href="tel:+56200000000" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4h2c.7 0 1.3.5 1.5 1.2l.6 2.4c.1.6-.1 1.2-.6 1.5l-1.2.8a12 12 0 0 0 5.3 5.3l.8-1.2c.3-.5.9-.7 1.5-.6l2.4.6c.7.2 1.2.8 1.2 1.5v2c0 .8-.7 1.5-1.5 1.5A15 15 0 0 1 4 5.5Z"></path></svg>+56 2 XXXX XXXX</a>
+            <div style="display:flex;gap:12px;margin-bottom:6px">
+              <a href="https://www.instagram.com/centro.cimac/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#ffffff;transition:background .3s ease,border-color .3s ease,color .3s ease" style-hover="background:#ffffff;border-color:#ffffff;color:#16111f""><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+              <a href="https://www.linkedin.com/in/centro-cimac/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#ffffff;transition:background .3s ease,border-color .3s ease,color .3s ease" style-hover="background:#ffffff;border-color:#ffffff;color:#16111f""><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7.5 10.5V17M7.5 7.2v.1M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"></path></svg></a>
+            </div>
+            <a href="mailto:contacto.cimac@usach.cl" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 6.5 8.5 6 8.5-6"></path></svg>contacto.cimac@usach.cl</a>
           </div>
         </div>
       </div>
@@ -743,7 +788,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
         <div style="display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
           <a href="#top" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">Términos y condiciones</a>
           <a href="#top" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">Política de privacidad</a>
-          <a href="mailto:contacto@cimac.cl" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">contacto@cimac.cl</a>
+          <a href="mailto:contacto.cimac@usach.cl" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">contacto.cimac@usach.cl</a>
           <p style="margin:0;font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)">Desarrollado por <a href="https://deltadigital.cl" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7)" style-hover="color:#fc4425">Delta Digital</a></p>
         </div>
       </div>
@@ -761,6 +806,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
 <script type="text/x-dc" data-dc-script data-props="{&quot;pinnedScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Interacción&quot;},&quot;showCampaign&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;},&quot;showWhatsapp&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;}}">
 class Component extends DCLogic {
   state = {
+    heroIdx: 0,
     menu: false,
     isDesktop: typeof window !== 'undefined' ? window.innerWidth >= 1000 : true,
     motivo: '',
@@ -894,8 +940,37 @@ class Component extends DCLogic {
     if (lbl) lbl.style.color = this.state.motivo ? '#ffffff' : 'rgba(255,255,255,.5)';
   }
 
+  heroGo(i) { this.heroT0 = performance.now(); this.heroAcc = 0; this.setState({ heroIdx: (i + 3) % 3 }); }
+  heroTick = (now) => {
+    const D = 7000;
+    if (!this.heroT0) this.heroT0 = now;
+    const el = this.heroPaused ? this.heroAcc || 0 : (this.heroAcc || 0) + (now - this.heroT0);
+    if (this.heroPaused) this.heroT0 = now; else { this.heroAcc = el; this.heroT0 = now; }
+    const p = Math.min(1, el / D);
+    const root = this.root && this.root.current;
+    if (root) root.querySelectorAll('[data-hero-bar]').forEach(b => {
+      const k = +b.dataset.heroBar, idx = this.state.heroIdx;
+      b.style.transform = 'scaleX(' + (k < idx ? 1 : k === idx ? p : 0) + ')';
+    });
+    if (p >= 1) this.heroGo(this.state.heroIdx + 1);
+    this.heroRaf = requestAnimationFrame(this.heroTick);
+  };
+  heroVals() {
+    const idx = this.state.heroIdx, o = { label: '0' + (idx + 1) + ' / 03' };
+    for (let i = 0; i < 3; i++) {
+      const on = i === idx;
+      o['s' + i] = { op: on ? 1 : 0, sc: on ? 1 : 1.06, ty: on ? '0px' : (i < idx ? '-18px' : '18px'), pe: on ? 'auto' : 'none', hid: on ? 'false' : 'true', tab: on ? 0 : -1, go: () => this.heroGo(i) };
+    }
+    return o;
+  }
+
   renderVals() {
     return {
+      hs: this.heroVals(),
+      heroPrev: () => this.heroGo(this.state.heroIdx - 1),
+      heroNext: () => this.heroGo(this.state.heroIdx + 1),
+      heroPause: () => { this.heroPaused = true; },
+      heroResume: () => { this.heroPaused = false; },
       root: this.root,
       menu: this.state.menu,
       isDesktop: this.state.isDesktop,
@@ -1005,6 +1080,7 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
+    this.heroRaf = requestAnimationFrame(this.heroTick);
     this.initLenis(0);
     this.onResize = () => {
       const d = window.innerWidth >= 1000;
@@ -1046,6 +1122,7 @@ class Component extends DCLogic {
   componentDidUpdate() { this.layoutPins(); this.onScroll(); this.paintChips(); this.setupHovers(); this.syncTouchCTAs(); this.setupCTAs(); this.setupCounters(); this.setupPingPongVideo(); this.setupLensVideo(); }
 
   componentWillUnmount() {
+    cancelAnimationFrame(this.heroRaf);
     window.removeEventListener('resize', this.onResize);
     window.removeEventListener('scroll', this.onScrollHandler);
     document.removeEventListener('scroll', this.onScrollHandler, { capture: true });
@@ -1070,6 +1147,19 @@ class Component extends DCLogic {
     const narrow = window.innerWidth < 800;
     // the case photo fills the card height on desktop; on mobile it needs a
     // ratio of its own or it would collapse
+    root.querySelectorAll('[data-instgrid]').forEach(g => {
+      g.style.gridTemplateColumns = narrow ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr) clamp(16px,2vw,32px) repeat(5,minmax(0,1fr))';
+      g.style.rowGap = narrow ? '0' : '';
+      g.querySelectorAll('[data-instlabel]').forEach((l, i) => { l.style.gridColumn = narrow ? '1 / -1' : l.dataset.instlabel; l.style.marginTop = narrow && i ? '28px' : ''; });
+      const sp = g.querySelector('[data-instspacer]'); if (sp) sp.style.display = narrow ? 'none' : '';
+      g.querySelectorAll('[data-instlabel]').forEach((l, i) => { l.style.order = narrow ? String(i * 2) : ''; });
+      g.querySelectorAll('[data-instcell]').forEach((c, i) => {
+        const k = i - 1;
+        c.style.order = narrow ? (i === 0 ? '1' : '3') : '';
+        c.style.marginLeft = narrow ? (i === 0 || k % 2 === 0 ? '0' : '-1px') : (i <= 1 ? '0' : '-1px');
+        c.style.marginTop = narrow && k >= 2 ? '-1px' : '';
+      });
+    });
     root.querySelectorAll('[data-casephoto]').forEach(p => { p.style.aspectRatio = narrow ? '4/3' : ''; });
     root.querySelectorAll('[data-cols]').forEach(g => {
       const n = narrow ? 1 : parseInt(g.dataset.cols, 10) || 2;
@@ -1162,7 +1252,7 @@ class Component extends DCLogic {
     const card = root.querySelector('[data-casecard]');
     const ref = root.querySelector('[data-projcard]:not([data-casecard])');
     if (!card || !ref) return;
-    card.style.height = window.innerWidth >= 700 ? ref.getBoundingClientRect().height + 'px' : '';
+    card.style.height = ''; card.style.minHeight = window.innerWidth >= 700 ? ref.getBoundingClientRect().height + 'px' : '';
   }
 
   paintDots(sec, p) {
@@ -1555,7 +1645,7 @@ class Component extends DCLogic {
         if (fill) fill.style.width = on ? '100%' : '0%';
         if (name) name.style.color = on ? '#a08fc4' : '#ffffff';
         if (photo) {
-          photo.style.filter = on ? 'grayscale(0) contrast(1.02)' : 'grayscale(1) contrast(1.05)';
+          photo.style.filter = '';
           photo.style.transform = on ? 'scale(1.04)' : 'scale(1)';
         }
       });
