@@ -26,6 +26,7 @@ a:hover{color:#fc4425}
 ::selection{background:rgba(252,68,37,.22)}
 :focus-visible{outline:2px solid #fc4425;outline-offset:3px}
 [data-track]::-webkit-scrollbar{height:0}
+[data-newsrail]::-webkit-scrollbar{height:0}
 input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family:'Campton'}
 @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes riseT{from{transform:translateY(26px)}to{transform:none}}
@@ -48,12 +49,11 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
           <a href="#proyectos" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Proyectos</a>
           <a href="#nosotros" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Nosotros</a>
           <a href="#actualidad" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Noticias y Eventos</a>
-          <a href="#contacto" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Súmate</a>
           <a href="#contacto" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Contacto</a>
         </nav>
       </sc-if>
       <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
-        <a href="#contacto" style="display:inline-flex;align-items:center;gap:9px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:14px;padding:13px 22px;border-radius:999px;white-space:nowrap;transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-2px)">Solicita una asesoría</a>
+        <a href="#contacto" style="display:inline-flex;align-items:center;gap:9px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:14px;padding:13px 22px;border-radius:999px;white-space:nowrap;transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-2px)">Contáctanos</a>
         <button onClick="{{ toggleMenu }}" aria-label="Menú" style="display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:34px;padding:0 12px;border:1px solid rgba(255,255,255,.28);background:transparent;border-radius:999px;cursor:pointer;transition:border-color .3s ease,background .3s ease" style-hover="border-color:#ffffff;background:rgba(255,255,255,.08)">
           <span data-burger="" style="display:block;height:1.5px;background:#ffffff;border-radius:2px"></span>
           <span data-burger="" style="display:block;height:1.5px;background:#ffffff;border-radius:2px"></span>
@@ -73,12 +73,10 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
         <a href="#proyectos" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.11s" style-hover="color:#fc4425">Proyectos</a>
         <a href="#nosotros" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.17s" style-hover="color:#fc4425">Nosotros</a>
         <a href="#actualidad" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.23s" style-hover="color:#fc4425">Noticias y Eventos</a>
-        <a href="#contacto" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.29s" style-hover="color:#fc4425">Súmate</a>
         <a href="#contacto" onClick="{{ closeMenu }}" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.35s" style-hover="color:#fc4425">Contacto</a>
       </nav>
       <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;font-family:'Campton';font-size:14px;color:rgba(255,255,255,.5);animation:linkIn .6s both;animation-delay:.4s">
         <span>contacto@cimac.cl</span>
-        <span>+56 2 XXXX XXXX</span>
       </div>
     </div>
   </sc-if>
@@ -111,10 +109,9 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
           <h1 style="margin:0;max-width:100%;font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,3.6vw,56px);line-height:1.04;letter-spacing:-.03em;text-wrap:balance">Centro de Innovación en Tecnología y Diseño de Materiales para el Entorno Construido</h1>
           <p style="margin:clamp(18px,2.4vw,28px) 0 0;max-width:46ch;font-family:'Campton';font-size:clamp(16px,1.2vw,19px);line-height:1.6;color:rgba(255,255,255,.74);text-wrap:pretty">Diseño, Tecnología e Innovación en Materiales y Soluciones para el Entorno Construido</p>
           <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(26px,3.4vw,40px)">
-        <a href="#contacto" tabindex="{{ hs.s0.tab }}" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px)">Solicita una asesoría
+        <a href="#nosotros" tabindex="{{ hs.s0.tab }}" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px)">Conócenos
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
         </a>
-        <a href="#nosotros" tabindex="{{ hs.s0.tab }}" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);backdrop-filter:blur(34px);-webkit-backdrop-filter:blur(34px);color:#ffffff;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-3px);background:rgba(255,255,255,.16)">Conócenos</a>
           </div>
         </div>
         <div aria-hidden="{{ hs.s1.hid }}" style="grid-area:1/1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;opacity:{{ hs.s1.op }};transform:translateY({{ hs.s1.ty }});transition:opacity .7s ease,transform .9s cubic-bezier(.16,1,.3,1);pointer-events:{{ hs.s1.pe }}">
@@ -125,7 +122,6 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
         <a href="#actualidad" tabindex="{{ hs.s1.tab }}" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px)">Ver agenda
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
         </a>
-        <a href="#contacto" tabindex="{{ hs.s1.tab }}" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);backdrop-filter:blur(34px);-webkit-backdrop-filter:blur(34px);color:#ffffff;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-3px);background:rgba(255,255,255,.16)">Participa</a>
           </div>
         </div>
         <div aria-hidden="{{ hs.s2.hid }}" style="grid-area:1/1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;opacity:{{ hs.s2.op }};transform:translateY({{ hs.s2.ty }});transition:opacity .7s ease,transform .9s cubic-bezier(.16,1,.3,1);pointer-events:{{ hs.s2.pe }}">
@@ -136,7 +132,6 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
         <a href="#proyectos" tabindex="{{ hs.s2.tab }}" style="display:inline-flex;align-items:center;gap:12px;background:#ffffff;color:#1e1728;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px)">Ver proyectos
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
         </a>
-        <a href="#contacto" tabindex="{{ hs.s2.tab }}" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);backdrop-filter:blur(34px);-webkit-backdrop-filter:blur(34px);color:#ffffff;font-family:'Campton';font-weight:600;font-size:16px;padding:17px 28px;border-radius:999px;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s ease" style-hover="transform:translateY(-3px);background:rgba(255,255,255,.16)">Solicita una asesoría</a>
           </div>
         </div>
         </div>
@@ -166,7 +161,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
   </section>
 
   <sc-if value="{{ showCampaign }}" hint-placeholder-val="{{ true }}">
-  <a href="#actualidad" style="display:flex;align-items:center;gap:clamp(14px,2vw,28px);background:#fc4425;padding:12px clamp(16px,2.4vw,32px) 12px 0;color:#ffffff;transition:background .3s ease" style-hover="background:#e6351a">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9EKmSWt3Xmx52Ej-Rh3udDdTH-BI5qAnBqI02kvZv7drXTQ/viewform" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:clamp(14px,2vw,28px);background:#fc4425;padding:12px clamp(16px,2.4vw,32px) 12px 0;color:#ffffff;transition:background .3s ease" style-hover="background:#e6351a">
     <span style="flex:1 1 auto;min-width:0;overflow:hidden;display:block">
     <div style="display:flex;width:max-content;animation:marquee 34s linear infinite">
       <div style="display:flex;align-items:center;gap:clamp(28px,4vw,56px);padding-right:clamp(28px,4vw,56px)">
@@ -288,6 +283,29 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
   </section>
 
   <section id="proyectos" style="background:#ffffff;padding:clamp(72px,9vw,140px) clamp(20px,5vw,80px)">
+    <a data-projcard="" data-casecard="" data-stat="" href="#proyectos" style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:0;margin-bottom:clamp(72px,9vw,140px);background:#16111f;border:1px solid #16111f;color:#ffffff;cursor:pointer;overflow:hidden">
+      <span data-projbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+      <span style="display:flex;flex-direction:column;gap:14px;margin:clamp(22px,2.4vw,38px);min-width:0">
+        <span data-casephoto="" style="position:relative;display:block;flex:1 1 auto;min-height:260px;overflow:hidden;border:1px solid rgba(255,255,255,.13)">
+          <span data-projzoom="" style="position:absolute;inset:0;background-image:url('assets/ref/ben-maguire.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+        </span>
+        <span style="display:block;font-family:'Campton';font-size:13px;line-height:1.55;color:rgba(255,255,255,.55);text-wrap:pretty">La solución ha sido instalada en Desafío Ambiente, presentada en Casa FOA 2025 y utilizada como revestimiento acústico en salas del Campus USACH durante 2026.</span>
+      </span>
+      <span style="padding:clamp(28px,3.4vw,56px) clamp(28px,3.4vw,56px) clamp(28px,3.4vw,56px) clamp(10px,1.2vw,20px);display:flex;flex-direction:column;justify-content:center">
+        <span style="align-self:flex-start;font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 12px">Caso de éxito</span>
+        <span data-projrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(24px,2.6vw,36px)"><span data-projrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+        <span data-projtitle="" style="display:block;margin-top:clamp(18px,1.8vw,26px);font-family:'Euclid Flex';font-weight:600;font-size:clamp(24px,2.6vw,38px);line-height:1.08;letter-spacing:-.02em;color:#ffffff;transition:color .35s ease;text-wrap:pretty">Resonador Acústico Reciclado</span>
+        <span style="display:block;margin-top:14px;max-width:52ch;font-family:'Campton';font-size:clamp(16px,1.25vw,19px);line-height:1.5;color:rgba(255,255,255,.82)">De plástico reciclado a solución acústica para el entorno construido.</span>
+        <span style="display:block;margin-top:10px;font-family:'Campton';font-weight:500;font-size:14px;letter-spacing:.02em;color:rgba(255,255,255,.5)">Proyecto FONDEF ID23I10389</span>
+        <span style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(20px,2.4vw,36px);margin-top:clamp(26px,2.8vw,40px)">
+          <span style="display:block;min-width:0"><span style="display:block;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fc4425">El desafío</span><span style="display:block;margin-top:10px;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.72);text-wrap:pretty">Desarrollar una solución de acondicionamiento acústico que incorporara criterios de circularidad y que pudiera adaptarse a diferentes aplicaciones en espacios construidos.</span></span>
+          <span style="display:block;min-width:0"><span style="display:block;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fc4425">La solución</span><span style="display:block;margin-top:10px;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.72);text-wrap:pretty">Un resonador acústico fabricado con plástico reciclado preconsumo, con posibilidad de incorporar distintos materiales absorbentes y utilizarse en cielos modulares, nubes acústicas y revestimientos de muro.</span></span>
+        </span>
+        <span data-projexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Leer el caso
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+        </span>
+      </span>
+    </a>
     <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 5% entry 70%">
       <div>
         <p style="margin:0 0 16px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#a58a80">Portafolio</p>
@@ -357,29 +375,6 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
         </span>
       </a>
     </div>
-    <a data-projcard="" data-casecard="" data-stat="" href="#proyectos" style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:0;margin-top:-1px;background:#16111f;border:1px solid #16111f;color:#ffffff;cursor:pointer;overflow:hidden">
-      <span data-projbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
-      <span style="display:flex;flex-direction:column;gap:14px;margin:clamp(22px,2.4vw,38px);min-width:0">
-        <span data-casephoto="" style="position:relative;display:block;flex:1 1 auto;min-height:260px;overflow:hidden;border:1px solid rgba(255,255,255,.13)">
-          <span data-projzoom="" style="position:absolute;inset:0;background-image:url('assets/ref/ben-maguire.jpg');background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
-        </span>
-        <span style="display:block;font-family:'Campton';font-size:13px;line-height:1.55;color:rgba(255,255,255,.55);text-wrap:pretty">La solución ha sido instalada en Desafío Ambiente, presentada en Casa FOA 2025 y utilizada como revestimiento acústico en salas del Campus USACH durante 2026.</span>
-      </span>
-      <span style="padding:clamp(28px,3.4vw,56px) clamp(28px,3.4vw,56px) clamp(28px,3.4vw,56px) clamp(10px,1.2vw,20px);display:flex;flex-direction:column;justify-content:center">
-        <span style="align-self:flex-start;font-family:'Campton';font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:6px 12px">Caso de éxito</span>
-        <span data-projrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(24px,2.6vw,36px)"><span data-projrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
-        <span data-projtitle="" style="display:block;margin-top:clamp(18px,1.8vw,26px);font-family:'Euclid Flex';font-weight:600;font-size:clamp(24px,2.6vw,38px);line-height:1.08;letter-spacing:-.02em;color:#ffffff;transition:color .35s ease;text-wrap:pretty">Resonador Acústico Reciclado</span>
-        <span style="display:block;margin-top:14px;max-width:52ch;font-family:'Campton';font-size:clamp(16px,1.25vw,19px);line-height:1.5;color:rgba(255,255,255,.82)">De plástico reciclado a solución acústica para el entorno construido.</span>
-        <span style="display:block;margin-top:10px;font-family:'Campton';font-weight:500;font-size:14px;letter-spacing:.02em;color:rgba(255,255,255,.5)">Proyecto FONDEF ID23I10389</span>
-        <span style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(20px,2.4vw,36px);margin-top:clamp(26px,2.8vw,40px)">
-          <span style="display:block;min-width:0"><span style="display:block;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fc4425">El desafío</span><span style="display:block;margin-top:10px;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.72);text-wrap:pretty">Desarrollar una solución de acondicionamiento acústico que incorporara criterios de circularidad y que pudiera adaptarse a diferentes aplicaciones en espacios construidos.</span></span>
-          <span style="display:block;min-width:0"><span style="display:block;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fc4425">La solución</span><span style="display:block;margin-top:10px;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.72);text-wrap:pretty">Un resonador acústico fabricado con plástico reciclado preconsumo, con posibilidad de incorporar distintos materiales absorbentes y utilizarse en cielos modulares, nubes acústicas y revestimientos de muro.</span></span>
-        </span>
-        <span data-projexplore="" style="display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:'Campton';font-weight:600;font-size:14px;color:#fc4425;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .45s cubic-bezier(.16,1,.3,1)">Leer el caso
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
-        </span>
-      </span>
-    </a>
   </section>
 
   <section id="nosotros" data-pin="" style="background:#16111f;color:#ffffff;position:relative">
@@ -398,7 +393,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">José Antonio Carrasco Villa</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Director Ejecutivo</p>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+            <a href="https://www.linkedin.com/in/tonocarrasco/" target="_blank" rel="noopener" aria-label="LinkedIn de José Antonio Carrasco" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
             </a>
           </article>
@@ -409,7 +404,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Alexandre Carbonnel Torralbo</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Director Científico</p>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+            <a href="https://www.linkedin.com/in/alexandre-carbonnel-b2695412/" target="_blank" rel="noopener" aria-label="LinkedIn de Alexandre Carbonnel" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
             </a>
           </article>
@@ -420,7 +415,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Francisca Troncoso</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargada de Transferencia Tecnológica</p>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+            <a href="https://www.linkedin.com/in/francisca-paz-troncoso-herrera-78526258/" target="_blank" rel="noopener" aria-label="LinkedIn de Francisca Troncoso" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
             </a>
           </article>
@@ -431,7 +426,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
             <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Leslie Díaz</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargada Técnica de Transferencia Tecnológica</p>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+            <a href="https://www.linkedin.com/in/leslie-diaz-jalaff-62450b16a/" target="_blank" rel="noopener" aria-label="LinkedIn de Leslie Díaz" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
             </a>
           </article>
@@ -454,6 +449,50 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
             <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Iván Toro</h3>
             <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Encargado de Finanzas</p>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/hugo-perez.jpeg" alt="Dr. Hugo David Pérez Herrera" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Dr. Hugo David Pérez Herrera</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Líder de Línea 1 — MPS</p>
+            <a href="https://www.linkedin.com/in/hugo-p%C3%A9rez-herrera-27828a35/" target="_blank" rel="noopener" aria-label="LinkedIn de Dr. Hugo David Pérez Herrera" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/macarena-valenzuela.jpeg" alt="Dra. Macarena Valenzuela Zubiaur" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Dra. Macarena Valenzuela Zubiaur</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Líder de Línea 2 — CBB</p>
+            <a href="https://www.linkedin.com/in/macarena-valenzuela-zubiaur-223b772b" target="_blank" rel="noopener" aria-label="LinkedIn de Dra. Macarena Valenzuela Zubiaur" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/ivan-derpich.jpeg" alt="Dr. Iván Derpich Contreras" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Dr. Iván Derpich Contreras</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Líder de Línea 3 — LCPR</p>
+            <a href="https://cl.linkedin.com/in/ivan-derpich-5aa23829" target="_blank" rel="noopener" aria-label="LinkedIn de Dr. Iván Derpich Contreras" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
+            </a>
+          </article>
+          <article data-stat="" data-teamcard="" style="position:relative;overflow:hidden;flex:0 0 auto;width:clamp(230px,21vw,310px);scroll-snap-align:start;border-left:1px solid rgba(255,255,255,.13);padding:clamp(20px,2.2vw,30px);text-align:left;display:flex;flex-direction:column;align-items:stretch">
+            <span data-teambar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#654a9e;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+            <span data-teamglow="" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(101,74,158,0) 30%,rgba(101,74,158,.3) 100%);opacity:0;transition:opacity .5s ease;pointer-events:none"></span>
+            <span style="display:block;position:relative;width:100%;aspect-ratio:3/4;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);overflow:hidden"><img src="assets/team/pavlo-santander.jpeg" alt="Dr. Pavlo Santander Tapia" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;transition:filter .5s ease,transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-teamrule="" style="position:relative;display:block;height:1px;background:rgba(255,255,255,.18);overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-teamrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#654a9e;transition:width .5s ease-out"></span></span>
+            <h3 data-teamname="" style="position:relative;margin:18px 0 0;transition:color .35s ease;font-family:'Euclid Flex';font-weight:600;font-size:clamp(17px,1.5vw,20px);line-height:1.2;text-wrap:pretty">Dr. Pavlo Santander Tapia</h3>
+            <p style="margin:10px 0 0;font-family:'Campton';font-size:13px;line-height:1.5;color:rgba(255,255,255,.58)">Líder de Línea 4 — IDSS</p>
+            <a href="https://www.linkedin.com/in/pavlo-santander-tapia/" target="_blank" rel="noopener" aria-label="LinkedIn de Dr. Pavlo Santander Tapia" style="align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:rgba(255,255,255,.55);transition:color .3s ease" style-hover="color:#8a6fc4">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.2 8.5h3.5V21H3.2V8.5zm5.6 0h3.35v1.7h.05c.47-.87 1.6-1.79 3.3-1.79 3.53 0 4.18 2.24 4.18 5.15V21h-3.5v-6.2c0-1.48-.03-3.38-2.08-3.38-2.09 0-2.4 1.6-2.4 3.27V21H8.8V8.5z"></path></svg>
             </a>
           </article>
@@ -488,6 +527,40 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
     </div>
   </section>
 
+  <section style="background:#f6f5f9;padding:0 0 clamp(56px,7vw,104px)">
+    <p style="margin:0 clamp(20px,5vw,80px) clamp(18px,2vw,28px);font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8a8299">Empresas que colaboran</p>
+    <div style="overflow:hidden;border-top:1px solid #e2ddec;border-bottom:1px solid #e2ddec;padding:clamp(22px,2.6vw,36px) 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)">
+    <div style="display:flex;width:max-content;animation:marquee 48s linear infinite">
+      <div style="display:flex;align-items:center;gap:clamp(40px,5vw,80px);padding-right:clamp(40px,5vw,80px)">
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/c2025_n.png" alt="Construye 2025" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/gb_n.png" alt="Gestión B" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/aoa_n.png" alt="AOA" loading="lazy" style="max-width:100%;max-height:62%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/ebp_n.png" alt="EBP" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/pjh_n.png" alt="Plásticos JH" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/volcan_n.png" alt="Volcán" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/fch_n.png" alt="Fundación Chile" loading="lazy" style="max-width:100%;max-height:62%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/cu_n.png" alt="Città Urbana" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/crspa_n.png" alt="Caucho Reciclado SpA" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/plastico_n.png" alt="Plasti Co" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/da_n.png" alt="Desafío Ambiente" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+      </div>
+      <div aria-hidden="true" style="display:flex;align-items:center;gap:clamp(40px,5vw,80px);padding-right:clamp(40px,5vw,80px)">
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/c2025_n.png" alt="Construye 2025" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/gb_n.png" alt="Gestión B" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/aoa_n.png" alt="AOA" loading="lazy" style="max-width:100%;max-height:62%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/ebp_n.png" alt="EBP" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/pjh_n.png" alt="Plásticos JH" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/volcan_n.png" alt="Volcán" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/fch_n.png" alt="Fundación Chile" loading="lazy" style="max-width:100%;max-height:62%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/cu_n.png" alt="Città Urbana" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/crspa_n.png" alt="Caucho Reciclado SpA" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/plastico_n.png" alt="Plasti Co" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:clamp(130px,12vw,180px);height:clamp(64px,6vw,84px)"><img src="assets/empresas/da_n.png" alt="Desafío Ambiente" loading="lazy" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;opacity:.72"></span>
+      </div>
+    </div>
+    </div>
+  </section>
+
   <section id="actualidad" style="background:#ffffff;padding:clamp(72px,9vw,140px) clamp(20px,5vw,80px)">
     <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
       <div>
@@ -496,7 +569,7 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
       </div>
       <a href="#actualidad" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(30,23,40,.22);color:#1e1728;font-family:'Campton';font-weight:600;font-size:14px;padding:14px 24px;border-radius:999px;transition:border-color .3s ease,background .3s ease,transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-2px)">Ver todo</a>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#e6e2ee;border:1px solid #e6e2ee;margin-top:clamp(36px,4.5vw,64px)" data-stat="" data-cols="3">
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#e6e2ee;border:1px solid #e6e2ee;margin-top:clamp(36px,4.5vw,64px)" data-stat="" data-cols="3" data-newsrail="">
       <a data-newscard="" href="#actualidad" style="position:relative;overflow:hidden;display:flex;flex-direction:column;background:#ffffff;padding:clamp(18px,2vw,28px);color:#1e1728;cursor:pointer">
         <span data-nbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
         <span style="display:block;position:relative;overflow:hidden;aspect-ratio:4/3;border:1px solid #e6e2ee">
@@ -763,7 +836,6 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.45);font-family
             <a href="#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Laboratorios</a>
             <a href="#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Servicios</a>
             <a href="#proyectos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Proyectos</a>
-            <a href="#contacto" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Súmate</a>
           </div>
         </div>
         <div style="flex:1 1 170px;min-width:0">
@@ -1165,6 +1237,18 @@ class Component extends DCLogic {
       });
     });
     root.querySelectorAll('[data-casephoto]').forEach(p => { p.style.aspectRatio = narrow ? '4/3' : ''; });
+    root.querySelectorAll('[data-newsrail]').forEach(r => {
+      Object.assign(r.style, narrow
+        ? { display: 'flex', gap: '12px', overflowX: 'auto', scrollSnapType: 'x mandatory', background: 'transparent', border: '0', marginInline: 'calc(-1 * clamp(20px,5vw,80px))', paddingInline: 'clamp(20px,5vw,80px)', scrollPaddingInline: 'clamp(20px,5vw,80px)', scrollbarWidth: 'none' }
+        : { display: 'grid', gap: '1px', overflowX: '', scrollSnapType: '', background: '#e6e2ee', border: '1px solid #e6e2ee', marginInline: '', paddingInline: '', scrollPaddingInline: '', scrollbarWidth: '' });
+      [...r.children].forEach(c => {
+        Object.assign(c.style, narrow
+          ? { flex: '0 0 74%', scrollSnapAlign: 'start', border: '1px solid #e6e2ee', padding: '14px' }
+          : { flex: '', scrollSnapAlign: '', border: '', padding: 'clamp(18px,2vw,28px)' });
+        const img = c.children[1]; if (img) img.style.aspectRatio = narrow ? '16/10' : '4/3';
+        const t = c.querySelector('[data-ntitle]'); if (t) { t.style.fontSize = narrow ? '16px' : ''; t.style.marginTop = narrow ? '8px' : ''; }
+      });
+    });
     root.querySelectorAll('[data-cols]').forEach(g => {
       const n = narrow ? 1 : parseInt(g.dataset.cols, 10) || 2;
       g.style.gridTemplateColumns = 'repeat(' + n + ',minmax(0,1fr))';
