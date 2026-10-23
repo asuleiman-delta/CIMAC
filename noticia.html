@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-5e022a0e-b71f-4223-b93c-179ce59a54f1/styles.css">
+<script src="_ds/industry-5e022a0e-b71f-4223-b93c-179ce59a54f1/_ds_bundle.js"></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<style>
+@font-face{font-family:'Euclid Flex';src:url('assets/fonts/EuclidFlexMedium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Euclid Flex';src:url('assets/fonts/EuclidFlexSemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Euclid Flex';src:url('assets/fonts/EuclidFlexBold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Campton';src:url('assets/fonts/CamptonBook.otf') format('opentype');font-weight:400;font-display:swap}
+@font-face{font-family:'Campton';src:url('assets/fonts/CamptonMedium.otf') format('opentype');font-weight:500;font-display:swap}
+@font-face{font-family:'Campton';src:url('assets/fonts/CamptonSemiBold.otf') format('opentype');font-weight:600;font-display:swap}
+body{margin:0;background:#ffffff;color:#1e1728;font-family:'Campton','Helvetica Neue',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+*{box-sizing:border-box}
+a{color:#654a9e;text-decoration:none;transition:color .25s ease}
+a:hover{color:#fc4425}
+::selection{background:rgba(252,68,37,.22)}
+:focus-visible{outline:2px solid #fc4425;outline-offset:3px}
+input::placeholder{color:rgba(255,255,255,.45);font-family:'Campton'}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes linkIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+</style>
+</helmet>
+
+<div ref="{{ root }}" style="position:relative;width:100%;overflow:clip">
+
+  <header data-header="" style="position:fixed;top:0;left:0;right:0;z-index:60;transition:background .35s ease,border-color .35s ease;border-bottom:1px solid transparent">
+    <sc-if value="{{ showProgress }}" hint-placeholder-val="{{ true }}">
+      <span data-progress="" style="position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:#fc4425;transform:scaleX(0);transform-origin:left;pointer-events:none"></span>
+    </sc-if>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px clamp(20px,5vw,80px)">
+      <a href="index.html" style="display:block;flex:0 0 auto">
+        <img src="assets/cimac-logo-slogan-white.png" alt="CIMAC · Centro de Innovación en Tecnología de Materiales" style="height:clamp(40px,3.6vw,52px);width:auto;display:block">
+      </a>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <nav style="display:flex;align-items:center;gap:clamp(14px,1.9vw,32px)">
+          <a href="index.html#que-hacemos" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">¿Qué hacemos?</a>
+          <a href="index.html#proyectos" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Proyectos</a>
+          <a href="index.html#nosotros" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Nosotros</a>
+          <a href="index.html#actualidad" aria-current="page" style="position:relative;font-family:'Campton';font-size:15px;font-weight:500;color:#ffffff;padding-bottom:4px;border-bottom:1px solid #fc4425">Noticias y Eventos</a>
+          <a href="index.html#contacto" style="font-family:'Campton';font-size:15px;font-weight:500;color:rgba(255,255,255,.86)" style-hover="color:#ffffff">Contacto</a>
+        </nav>
+      </sc-if>
+      <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
+        <a data-cta="" href="index.html#contacto" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;background:#ffffff;color:#1e1728;border:1px solid #ffffff;font-family:'Campton';font-weight:600;font-size:14px;padding:13px 22px;border-radius:999px;white-space:nowrap;transition:color .35s ease,border-color .4s ease"><span data-cta-sweep="" style="position:absolute;inset:0;background:#fc4425;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1);pointer-events:none"></span><span style="position:relative;z-index:1">Contáctanos</span></a>
+        <button onClick="{{ toggleMenu }}" aria-label="Menú" style="display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:34px;padding:0 12px;border:1px solid rgba(255,255,255,.28);background:transparent;border-radius:999px;cursor:pointer;transition:border-color .3s ease,background .3s ease" style-hover="border-color:#ffffff;background:rgba(255,255,255,.08)">
+          <span style="display:block;height:1.5px;background:#ffffff;border-radius:2px"></span>
+          <span style="display:block;height:1.5px;background:#ffffff;border-radius:2px"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:70;background:#16111f;display:flex;flex-direction:column;padding:clamp(20px,5vw,80px);animation:linkIn .4s both">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <img src="assets/cimac-logo-slogan-white.png" alt="CIMAC" style="height:44px;width:auto">
+        <button onClick="{{ toggleMenu }}" aria-label="Cerrar" style="width:46px;height:34px;border:1px solid rgba(255,255,255,.28);background:transparent;border-radius:999px;color:#ffffff;font-size:20px;cursor:pointer;font-family:'Campton'">×</button>
+      </div>
+      <nav style="margin-top:auto;margin-bottom:auto;display:flex;flex-direction:column;gap:clamp(6px,1.4vh,14px)">
+        <a href="index.html#que-hacemos" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.05s" style-hover="color:#fc4425">¿Qué hacemos?</a>
+        <a href="index.html#proyectos" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.11s" style-hover="color:#fc4425">Proyectos</a>
+        <a href="index.html#nosotros" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.17s" style-hover="color:#fc4425">Nosotros</a>
+        <a href="index.html#actualidad" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#fc4425;animation:linkIn .55s both;animation-delay:.23s">Noticias y Eventos</a>
+        <a href="index.html#contacto" style="font-family:'Euclid Flex';font-weight:700;font-size:clamp(30px,6vw,64px);line-height:1.05;letter-spacing:-.02em;color:#ffffff;animation:linkIn .55s both;animation-delay:.29s" style-hover="color:#fc4425">Contacto</a>
+      </nav>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;font-family:'Campton';font-size:14px;color:rgba(255,255,255,.5);animation:linkIn .6s both;animation-delay:.4s">
+        <span>contacto@cimac.cl</span>
+      </div>
+    </div>
+  </sc-if>
+
+  <section data-hero="" style="position:relative;background:#1e1728;color:#ffffff;padding:clamp(130px,15vw,200px) clamp(20px,5vw,80px) clamp(150px,17vw,270px)">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(22px,2.4vw,32px)">
+      <nav aria-label="Ruta" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-family:'Campton';font-weight:500;font-size:13px;color:rgba(255,255,255,.5);animation:rise .8s cubic-bezier(.16,1,.3,1) both">
+        <a href="index.html" style="color:rgba(255,255,255,.5)" style-hover="color:#ffffff">Inicio</a>
+        <span aria-hidden="true">/</span>
+        <a href="index.html#actualidad" style="color:rgba(255,255,255,.5)" style-hover="color:#ffffff">Noticias y Eventos</a>
+        <span aria-hidden="true">/</span>
+        <span style="color:rgba(255,255,255,.82)">Noticia</span>
+      </nav>
+      <p style="margin:0;font-family:'Campton';font-weight:600;font-size:12px;letter-spacing:.14em;color:#c9b3aa;animation:rise .8s cubic-bezier(.16,1,.3,1) both;animation-delay:.06s">{{ news.date }} · NOTICIA</p>
+      <h1 style="margin:0;max-width:22ch;font-family:'Euclid Flex';font-weight:700;font-size:clamp(36px,4.8vw,72px);line-height:1.04;letter-spacing:-.028em;text-wrap:balance;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.12s">{{ news.title }}</h1>
+      <p style="margin:0;max-width:58ch;font-family:'Campton';font-size:clamp(18px,1.45vw,22px);line-height:1.55;color:rgba(255,255,255,.74);text-wrap:pretty;animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-delay:.2s">El órgano tendrá un rol clave en la gobernanza del Centro, resguardando el cumplimiento de sus compromisos y orientando su desarrollo estratégico en articulación con el sector productivo.</p>
+    </div>
+  </section>
+
+  <div style="position:relative;padding:0 clamp(20px,5vw,80px);margin-top:calc(-1 * clamp(110px,13vw,210px))">
+    <sc-if value="{{ wideImage }}" hint-placeholder-val="{{ true }}">
+      <figure style="margin:0 auto;max-width:1500px;position:relative;overflow:hidden;aspect-ratio:21/9;min-height:240px;border:1px solid rgba(255,255,255,.08);background:#2a2236;animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.28s">
+        <span data-parallax-img="" style="position:absolute;inset:-6% 0;background-image:{{ news.bg }};background-size:cover;background-position:center;will-change:transform"></span>
+      </figure>
+    </sc-if>
+    <sc-if value="{{ containedImage }}" hint-placeholder-val="{{ false }}">
+      <figure style="margin:0 auto;max-width:1180px;position:relative;overflow:hidden;aspect-ratio:16/9;min-height:220px;border:1px solid rgba(255,255,255,.08);background:#2a2236;animation:rise 1s cubic-bezier(.16,1,.3,1) both;animation-delay:.28s">
+        <span data-parallax-img="" style="position:absolute;inset:-6% 0;background-image:{{ news.bg }};background-size:cover;background-position:center;will-change:transform"></span>
+      </figure>
+    </sc-if>
+  </div>
+
+  <section style="background:#ffffff;padding:clamp(56px,7vw,110px) clamp(20px,5vw,80px) clamp(72px,9vw,130px)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:{{ bodyCols }};gap:clamp(28px,4vw,56px);align-items:start">
+
+      <aside aria-label="Compartir" style="justify-self:{{ asideJustify }};position:{{ asidePos }};top:120px;display:flex;flex-direction:column;align-items:center">
+        <div style="position:relative;display:flex;flex-direction:column;align-items:center">
+          <div style="display:flex;flex-direction:{{ shareDir }};gap:10px">
+            <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid rgba(30,23,40,.18);color:#1e1728;transition:background .3s ease,border-color .3s ease,color .3s ease" style-hover="background:#fc4425;border-color:#fc4425;color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7.5 10.5V17M7.5 7.2v.1M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"></path></svg></a>
+            <a href="mailto:?subject=CIMAC%20constituye%20su%20Consejo%20Directivo" aria-label="Compartir por correo" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid rgba(30,23,40,.18);color:#1e1728;transition:background .3s ease,border-color .3s ease,color .3s ease" style-hover="background:#fc4425;border-color:#fc4425;color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 6.5 8.5 6 8.5-6"></path></svg></a>
+            <button onClick="{{ copyLink }}" aria-label="Copiar enlace" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid rgba(30,23,40,.18);background:transparent;color:#1e1728;cursor:pointer;transition:background .3s ease,border-color .3s ease,color .3s ease" style-hover="background:#fc4425;border-color:#fc4425;color:#ffffff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path></svg></button>
+          </div>
+          <sc-if value="{{ copied }}" hint-placeholder-val="{{ false }}">
+            <span style="position:absolute;left:calc(100% + 12px);bottom:12px;white-space:nowrap;font-family:'Campton';font-size:13px;color:#fc4425;animation:linkIn .35s both">Enlace copiado</span>
+          </sc-if>
+        </div>
+      </aside>
+
+      <article data-article="" style="min-width:0;width:100%;max-width:780px;justify-self:center;display:flex;flex-direction:column;gap:28px">
+        <p style="margin:0;font-family:'Campton';font-size:clamp(17px,1.25vw,19px);line-height:1.72;color:#2e2638;text-wrap:pretty">El Centro de Innovación en Tecnología y Diseño de Materiales para el Entorno Construido (CIMAC), patrocinado por la Universidad de Santiago de Chile (USACH) y financiado por la Agencia Nacional de Investigación y Desarrollo (ANID), realizó recientemente su primera sesión oficial del Consejo Directivo, marcando un hito en su proceso de consolidación institucional.</p>
+        <p style="margin:0;font-family:'Campton';font-size:clamp(17px,1.25vw,19px);line-height:1.72;color:#2e2638;text-wrap:pretty">En la instancia se constituyó formalmente este órgano, encargado de resguardar el cumplimiento de los compromisos con ANID y la correcta ejecución del proyecto en sus aspectos técnicos y financieros. Asimismo, su rol será clave para orientar estratégicamente el desarrollo del Centro y fortalecer su vinculación con el sector productivo.</p>
+        <p style="margin:0;font-family:'Campton';font-size:clamp(17px,1.25vw,19px);line-height:1.72;color:#2e2638;text-wrap:pretty">Durante la sesión se presentó la misión del Centro, sus líneas de I+D+i+TT y sus capacidades distribuidas. También se abordaron aspectos como la gobernanza del Consejo Directivo, el modelo financiero proyectado para el quinquenio, las estrategias de captación y las modalidades de vinculación al ecosistema CIMAC.</p>
+
+        <blockquote style="margin:clamp(16px,2.4vw,32px) 0;padding:clamp(28px,3vw,40px) 0;border-top:1px solid #e6e2ee;border-bottom:1px solid #e6e2ee;display:flex;flex-direction:column;gap:22px">
+          <span aria-hidden="true" style="display:block;width:40px;height:2px;background:#fc4425"></span>
+          <p style="margin:0;font-family:'Euclid Flex';font-weight:600;font-size:clamp(22px,2.1vw,30px);line-height:1.32;letter-spacing:-.015em;color:#1e1728;text-wrap:pretty">«La diversidad de actores que contiene el Consejo Directivo es un terreno más fértil para innovar desde el Centro CIMAC. Las distintas miradas permiten responder mejor a las expectativas del entorno y generar una agenda de trabajo más pertinente, colaborativa y alineada con los desafíos actuales de la construcción y la economía circular».</p>
+          <footer style="display:flex;flex-direction:column;gap:4px">
+            <span style="font-family:'Campton';font-weight:600;font-size:15px;color:#1e1728">José Antonio Carrasco</span>
+            <span style="font-family:'Campton';font-size:14px;color:#8a8299">Director Ejecutivo de CIMAC</span>
+          </footer>
+        </blockquote>
+
+        <p style="margin:0;font-family:'Campton';font-size:clamp(17px,1.25vw,19px);line-height:1.72;color:#2e2638;text-wrap:pretty">Con la conformación de este Consejo Directivo, CIMAC fortalece los espacios de colaboración entre academia, sector productivo e instituciones públicas, impulsando una agenda de innovación orientada a responder a los desafíos actuales y futuros de la construcción.</p>
+
+        <div style="display:flex;margin-top:clamp(14px,2vw,28px)">
+          <a data-cta="" href="index.html#actualidad" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;background:transparent;color:#1e1728;border:1px solid rgba(30,23,40,.22);font-family:'Campton';font-weight:600;font-size:14px;padding:14px 24px;border-radius:999px;transition:color .35s ease,border-color .4s ease"><span data-cta-sweep="" style="position:absolute;inset:0;background:#fc4425;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1);pointer-events:none"></span><span style="position:relative;z-index:1;display:inline-flex;align-items:center;gap:10px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>Volver a Noticias y Eventos</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section style="background:#f6f4f8;border-top:1px solid #ece8f1;padding:clamp(72px,9vw,130px) clamp(20px,5vw,80px)">
+    <div style="max-width:1500px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
+        <div>
+          <p style="margin:0 0 16px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#a58a80">Actualidad</p>
+          <h2 style="margin:0;font-family:'Euclid Flex';font-weight:700;font-size:clamp(36px,4.4vw,64px);line-height:1;letter-spacing:-.025em;color:#1e1728">Más noticias</h2>
+        </div>
+        <a data-cta="" href="index.html#actualidad" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;background:transparent;color:#1e1728;border:1px solid rgba(30,23,40,.22);font-family:'Campton';font-weight:600;font-size:14px;padding:14px 24px;border-radius:999px;transition:color .35s ease,border-color .4s ease"><span data-cta-sweep="" style="position:absolute;inset:0;background:#fc4425;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1);pointer-events:none"></span><span style="position:relative;z-index:1">Ver todo</span></a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:1px;background:#e6e2ee;border:1px solid #e6e2ee;margin-top:clamp(36px,4.5vw,64px)">
+        <sc-for list="{{ others }}" as="item" hint-placeholder-count="2">
+        <a data-newscard="" href="{{ item.href }}" style="position:relative;overflow:hidden;display:flex;flex-direction:column;background:#ffffff;padding:clamp(18px,2vw,28px);color:#1e1728;cursor:pointer">
+          <span data-nbar="" style="position:absolute;top:0;left:0;width:2px;height:100%;background:#fc4425;transform:scaleY(0);transform-origin:top;transition:transform .5s ease-out;pointer-events:none;z-index:1"></span>
+          <span style="display:block;position:relative;overflow:hidden;aspect-ratio:16/10;border:1px solid #e6e2ee">
+            <span data-nzoom="" style="position:absolute;inset:0;background-image:{{ item.bg }};background-size:cover;background-position:center;transition:transform .6s cubic-bezier(.16,1,.3,1)"></span>
+            <span data-narrow="" style="position:absolute;right:14px;bottom:14px;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#fc4425;color:#ffffff;opacity:0;transform:translateY(10px);transition:opacity .4s ease,transform .5s cubic-bezier(.16,1,.3,1)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg></span>
+          </span>
+          <span style="position:relative;display:block;height:1px;background:#e6e2ee;overflow:hidden;margin-top:clamp(18px,2vw,26px)"><span data-nrule-fill="" style="position:absolute;top:0;bottom:0;left:0;width:0%;background:#fc4425;transition:width .5s ease-out"></span></span>
+          <span style="display:block;padding:18px 0 0">
+            <span style="display:block;font-family:'Campton';font-weight:600;font-size:12px;letter-spacing:.1em;color:#a58a80">{{ item.date }} · NOTICIA</span>
+            <span data-ntitle="" style="display:block;margin-top:12px;font-family:'Euclid Flex';font-weight:600;font-size:clamp(18px,1.5vw,23px);line-height:1.22;letter-spacing:-.015em;text-wrap:pretty;transition:color .35s ease">{{ item.title }}</span>
+          </span>
+        </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#16111f;color:#ffffff;padding:clamp(20px,3vw,44px) clamp(16px,3.5vw,48px) clamp(24px,3vw,44px)">
+    <div style="position:relative;overflow:hidden;border-radius:clamp(18px,2vw,28px);border:1px solid rgba(255,255,255,.07);background:#1a1424">
+      <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,3vw,48px);align-items:center;padding:clamp(28px,3.4vw,52px) clamp(22px,3vw,56px);border-bottom:1px solid rgba(255,255,255,.08)">
+        <div>
+          <p style="margin:0 0 12px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Newsletter</p>
+          <p style="margin:0;font-family:'Campton';font-size:clamp(15px,1.2vw,18px);line-height:1.55;color:rgba(255,255,255,.82);max-width:34ch">Noticias del centro, convocatorias abiertas y avances de nuestras líneas de investigación.</p>
+        </div>
+        <form onSubmit="{{ onSubscribe }}" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end">
+          <span style="position:relative;display:flex;align-items:center;flex:1 1 240px;max-width:360px">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;left:22px"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 6.5 8.5 6 8.5-6"></path></svg>
+            <input type="email" placeholder="tu@correo.cl" style="width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#ffffff;font-family:'Campton';font-size:15px;padding:17px 24px 17px 52px;transition:border-color .3s ease,background .3s ease" style-focus="border-color:rgba(252,68,37,.7);background:rgba(255,255,255,.08)">
+          </span>
+          <button data-cta="" type="submit" style="position:relative;overflow:hidden;background:#ffffff;color:#1e1728;border:1px solid #ffffff;border-radius:999px;font-family:'Campton';font-weight:600;font-size:15px;padding:17px 32px;cursor:pointer;transition:color .35s ease,border-color .4s ease"><span data-cta-sweep="" style="position:absolute;inset:0;background:#fc4425;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1);pointer-events:none"></span><span style="position:relative;z-index:1">{{ subscribeLabel }}</span></button>
+        </form>
+      </div>
+      <div style="position:relative;display:flex;flex-wrap:wrap;gap:clamp(28px,3.4vw,56px);padding:clamp(32px,4vw,64px) clamp(22px,3vw,56px)">
+        <div style="flex:1 1 320px;min-width:0;max-width:460px">
+          <div style="display:flex;align-items:center;gap:clamp(12px,1.6vw,22px);flex-wrap:nowrap;min-width:0">
+            <img src="assets/usach-white.png" alt="Universidad de Santiago de Chile" style="flex:0 1 auto;min-width:0;width:auto;height:auto;max-height:52px;max-width:48%;display:block;opacity:.85">
+            <span style="flex:0 0 1px;width:1px;height:44px;background:rgba(255,255,255,.16);display:block"></span>
+            <img src="assets/anid-white.png" alt="ANID · Agencia Nacional de Investigación y Desarrollo" style="flex:0 1 auto;min-width:0;width:auto;height:auto;max-height:68px;max-width:26%;display:block;opacity:.8">
+            <img src="assets/ministerio-white.png" alt="Ministerio de Ciencia, Tecnología, Conocimiento e Innovación · Gobierno de Chile" style="flex:0 1 auto;min-width:0;width:auto;height:auto;max-height:68px;max-width:26%;display:block;opacity:.8">
+          </div>
+          <p style="margin:26px 0 0;font-family:'Campton';font-size:15px;line-height:1.6;color:rgba(255,255,255,.6);max-width:38ch">Centro de Innovación en Tecnología y Diseño de Materiales para el Entorno Construido.</p>
+        </div>
+        <div style="flex:1 1 170px;min-width:0">
+          <p style="margin:0 0 22px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Áreas</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <a href="index.html#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Investigación</a>
+            <a href="index.html#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Transferencia Tecnológica</a>
+            <a href="index.html#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Laboratorios</a>
+            <a href="index.html#que-hacemos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Servicios</a>
+            <a href="index.html#proyectos" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Proyectos</a>
+          </div>
+        </div>
+        <div style="flex:1 1 170px;min-width:0">
+          <p style="margin:0 0 22px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Centro</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <a href="index.html#nosotros" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Nosotros</a>
+            <a href="index.html#actualidad" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Noticias y Eventos</a>
+            <a href="index.html#contacto" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Contacto</a>
+            <a href="index.html" style="font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff">Transparencia</a>
+          </div>
+        </div>
+        <div style="flex:1 1 190px;min-width:0">
+          <p style="margin:0 0 22px;font-family:'Campton';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.42)">Conecta</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;gap:12px;margin-bottom:6px">
+              <a href="https://www.instagram.com/centro.cimac/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#ffffff;transition:background .3s ease,border-color .3s ease,color .3s ease" style-hover="background:#ffffff;border-color:#ffffff;color:#16111f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+              <a href="https://www.linkedin.com/in/centro-cimac/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#ffffff;transition:background .3s ease,border-color .3s ease,color .3s ease" style-hover="background:#ffffff;border-color:#ffffff;color:#16111f"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7.5 10.5V17M7.5 7.2v.1M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"></path></svg></a>
+            </div>
+            <a href="mailto:contacto.cimac@usach.cl" style="display:flex;align-items:center;gap:11px;font-family:'Campton';font-size:15px;color:rgba(255,255,255,.72)" style-hover="color:#ffffff"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 6.5 8.5 6 8.5-6"></path></svg>contacto.cimac@usach.cl</a>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center;padding:clamp(20px,2.2vw,28px) clamp(22px,3vw,56px);border-top:1px solid rgba(255,255,255,.08)">
+        <p style="margin:0;font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)">© 2026 CIMAC · Universidad de Santiago de Chile</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center">
+          <a href="#" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">Términos y condiciones</a>
+          <a href="#" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">Política de privacidad</a>
+          <a href="mailto:contacto.cimac@usach.cl" style="font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)" style-hover="color:#ffffff">contacto.cimac@usach.cl</a>
+          <p style="margin:0;font-family:'Campton';font-size:13px;color:rgba(255,255,255,.42)">Desarrollado por <a href="https://deltadigital.cl" target="_blank" rel="noopener" style="color:rgba(255,255,255,.7)" style-hover="color:#fc4425">Delta Digital</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ showWhatsapp }}" hint-placeholder-val="{{ true }}">
+    <a href="https://wa.me/56200000000" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:55;width:50px;height:50px;border-radius:13px;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(252,68,37,.34);transition:transform .35s cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-4px) scale(1.04)">
+      <img src="assets/whatsapp.png" alt="" width="50" height="50" style="display:block;width:100%;height:100%;object-fit:cover">
+    </a>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;imageWidth&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Completa&quot;,&quot;Contenida&quot;],&quot;default&quot;:&quot;Completa&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Diseño&quot;},&quot;showProgress&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Interacción&quot;},&quot;showWhatsapp&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;}}">
+const NEWS = [
+  { id: 1, date: '02/06/26', title: 'CIMAC constituye su Consejo Directivo y proyecta su estrategia de vinculación con la industria', img: 'assets/ref/ken-cheung.jpg' },
+  { id: 2, date: '24/03/26', title: 'Académicos del CIMAC se adjudican proyectos Fondecyt 2026 para fortalecer la investigación en salud, sostenibilidad y entorno construido', img: 'assets/ref/nabajyoti-ray.jpg' },
+  { id: 3, date: '02/06/26', title: 'Investigadores del CIMAC Usach participan en conferencia internacional IAMOT 2026', img: 'assets/ref/abel-y-costa.jpg' }
+].map(n => ({ ...n, bg: "url('" + n.img + "')", href: 'noticia.html?n=' + n.id }));
+
+class Component extends DCLogic {
+  state = {
+    newsId: 0,
+    menu: false,
+    copied: false,
+    subscribed: false,
+    isDesktop: typeof window !== 'undefined' ? window.innerWidth >= 1000 : true
+  };
+
+  constructor(props) {
+    super(props);
+    this.root = React.createRef();
+  }
+
+  bindHovers() {
+    const root = this.root.current;
+    if (!root) return;
+    root.querySelectorAll('[data-cta]').forEach(el => {
+      if (el.dataset.bound) return;
+      el.dataset.bound = '1';
+      const sweep = el.querySelector('[data-cta-sweep]');
+      const baseColor = el.style.color;
+      const baseBorder = el.style.borderColor;
+      const paint = on => {
+        if (sweep) {
+          sweep.style.transformOrigin = on ? 'left' : 'right';
+          sweep.style.transform = on ? 'scaleX(1)' : 'scaleX(0)';
+        }
+        el.style.color = on ? '#ffffff' : baseColor;
+        el.style.borderColor = on ? '#fc4425' : baseBorder;
+      };
+      ['mouseenter', 'focus'].forEach(e => el.addEventListener(e, () => paint(true)));
+      ['mouseleave', 'blur'].forEach(e => el.addEventListener(e, () => paint(false)));
+    });
+    root.querySelectorAll('[data-newscard]').forEach(card => {
+      if (card.dataset.bound) return;
+      card.dataset.bound = '1';
+      const q = s => card.querySelector(s);
+      const zoom = q('[data-nzoom]'), bar = q('[data-nbar]'), fill = q('[data-nrule-fill]'), arrow = q('[data-narrow]'), title = q('[data-ntitle]');
+      const paint = on => {
+        if (zoom) zoom.style.transform = on ? 'scale(1.06)' : 'scale(1)';
+        if (bar) bar.style.transform = on ? 'scaleY(1)' : 'scaleY(0)';
+        if (fill) fill.style.width = on ? '100%' : '0%';
+        if (arrow) { arrow.style.opacity = on ? '1' : '0'; arrow.style.transform = on ? 'translateY(0)' : 'translateY(10px)'; }
+        if (title) title.style.color = on ? '#fc4425' : '#1e1728';
+      };
+      card.addEventListener('mouseenter', () => paint(true));
+      card.addEventListener('mouseleave', () => paint(false));
+    });
+  }
+
+  tick = () => {
+    const root = this.root.current;
+    if (root) {
+      const vh = window.innerHeight;
+      const hero = root.querySelector('[data-hero]');
+      const header = root.querySelector('[data-header]');
+      if (hero && header) {
+        const solid = hero.getBoundingClientRect().top < -40;
+        if (solid !== this.solid) {
+          this.solid = solid;
+          header.style.background = solid ? 'rgba(22,17,31,.92)' : 'transparent';
+          header.style.backdropFilter = solid ? 'saturate(140%) blur(14px)' : 'none';
+          header.style.borderBottomColor = solid ? 'rgba(255,255,255,.1)' : 'transparent';
+        }
+      }
+      const art = root.querySelector('[data-article]');
+      const bar = root.querySelector('[data-progress]');
+      if (art && bar) {
+        const r = art.getBoundingClientRect();
+        const p = Math.min(1, Math.max(0, (vh * 0.6 - r.top) / r.height));
+        bar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+      }
+      root.querySelectorAll('[data-parallax-img]').forEach(el => {
+        const r = el.parentElement.getBoundingClientRect();
+        const rel = (r.top + r.height / 2 - vh / 2) / vh;
+        el.style.transform = 'translate3d(0,' + (rel * -40).toFixed(2) + 'px,0)';
+      });
+    }
+    this.raf = requestAnimationFrame(this.tick);
+  };
+
+  initLenis(tries) {
+    const L = window.Lenis || (window.lenis && window.lenis.default);
+    if (!L) { if (tries < 40) this.lenisTo = setTimeout(() => this.initLenis(tries + 1), 100); return; }
+    if (this.lenis) return;
+    const opts = { duration: 1.15, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true };
+    const bodyScrolls = document.body.scrollHeight > document.body.clientHeight + 1 && /auto|scroll/.test(getComputedStyle(document.body).overflowY);
+    if (bodyScrolls) { opts.wrapper = document.body; opts.content = document.body; }
+    this.lenis = new L(opts);
+    const raf = t => { if (!this.lenis) return; this.lenis.raf(t); this.lenisRaf = requestAnimationFrame(raf); };
+    this.lenisRaf = requestAnimationFrame(raf);
+  }
+
+  readNews() {
+    const q = new URLSearchParams(window.location.search).get('n') || (window.location.hash.match(/n(\d)/) || [])[1];
+    const i = Math.min(NEWS.length, Math.max(1, parseInt(q, 10) || 1)) - 1;
+    if (i !== this.state.newsId) this.setState({ newsId: i });
+  }
+
+  componentDidMount() {
+    this.readNews();
+    this.onNav = () => this.readNews();
+    window.addEventListener('hashchange', this.onNav);
+    window.addEventListener('popstate', this.onNav);
+    this.bindHovers();
+    this.raf = requestAnimationFrame(this.tick);
+    this.initLenis(0);
+    this.onResize = () => {
+      const d = window.innerWidth >= 1000;
+      if (d !== this.state.isDesktop) this.setState({ isDesktop: d });
+    };
+    window.addEventListener('resize', this.onResize);
+  }
+
+  componentDidUpdate() { this.bindHovers(); }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    if (this.lenisRaf) cancelAnimationFrame(this.lenisRaf);
+    clearTimeout(this.lenisTo);
+    clearTimeout(this.copyTo);
+    window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('hashchange', this.onNav);
+    window.removeEventListener('popstate', this.onNav);
+    if (this.lenis) { this.lenis.destroy(); this.lenis = null; }
+  }
+
+  renderVals() {
+    const wide = (this.props.imageWidth ?? 'Completa') === 'Completa';
+    return {
+      root: this.root,
+      news: NEWS[this.state.newsId],
+      others: NEWS.filter((_, i) => i !== this.state.newsId),
+      menu: this.state.menu,
+      isDesktop: this.state.isDesktop,
+      copied: this.state.copied,
+      asidePos: this.state.isDesktop ? 'sticky' : 'static',
+      asideJustify: this.state.isDesktop ? 'end' : 'start',
+      bodyCols: this.state.isDesktop ? 'minmax(0,1fr) minmax(0,780px) minmax(0,1fr)' : 'minmax(0,1fr)',
+      shareDir: this.state.isDesktop ? 'column' : 'row',
+      wideImage: wide,
+      containedImage: !wide,
+      showProgress: this.props.showProgress !== false,
+      showWhatsapp: this.props.showWhatsapp !== false,
+      subscribeLabel: this.state.subscribed ? 'Suscrito' : 'Suscribirme',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      copyLink: () => {
+        try { navigator.clipboard && navigator.clipboard.writeText(window.location.href); } catch (e) {}
+        this.setState({ copied: true });
+        clearTimeout(this.copyTo);
+        this.copyTo = setTimeout(() => this.setState({ copied: false }), 2200);
+      },
+      onSubscribe: e => { e.preventDefault(); this.setState({ subscribed: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
